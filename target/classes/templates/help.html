@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Military Hub Help</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #004085;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        nav {
+            background-color: #e9ecef;
+            padding: 1em 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1em;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #004085;
+            font-weight: 500;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-info,
+        .contact-info {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .main-info h2,
+        .info-box h3 {
+            font-weight: 500;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .info-box {
+            flex: 1 1 calc(50% - 20px);
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .info-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .box {
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #004085;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .info-box {
+                flex: 1 1 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 0.5em 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+    <header>
+        <h1>Military Support Hub</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#main-info">Contact Information</a></li>
+            <li><a href="#contact-info">Contact Details</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div id="main-info" class="main-info box">
+            <h2>Contact Information</h2>
+            <p>Mental Health Crisis Team: 01392 674988</p>
+            <p>RD & E Hospital Main Switchboard: 01392 411611</p>
+            <p>Samaritans: Call 116 123 freephone (available 24/7)</p>
+            <p>Togetherall – A safe online service providing access to millions with anxiety, depression and other
+                common mental health issues. Free for serving personnel, veterans, family members and carers (available
+                24/7).</p>
+            <p>Forcesline - Call 0800 260 6767 or online through a chat messenger service, (available weekdays 09:00 -
+                17:30).</p>
+            <p>Combat Stress Call 0800138 1619 or by email (available 24 hours).</p>
+            <p>NHS Direct Call 111 for medical information, advice and reassurance, and helping millions of callers each
+                year (available 24 hours).</p>
+            <p>Veterans Welfare Service Call 08081914218 freephone (UK only) or email veterans-uk@mod.gov.uk (available
+                weekdays 08:00 - 16:00).</p>
+        </div>
+        <div id="contact-info" class="contact-info">
+            <div class="info-box box">
+                <h3>Contact Phones</h3>
+                <p>Mark - 07948 034992</p>
+                <p>Jola - 07534 590652</p>
+                <p>Gary - 07943 722414</p>
+            </div>
+            <div class="info-box box">
+                <h3>E-mail</h3>
+                <p>info@armedforceshub.org</p>
+            </div>
+            <div class="info-box box">
+                <h3>Address</h3>
+                <p>Armed Forces Community Support Hub (Devon)</p>
+            </div>
+            <div class="info-box box">
+                <h3>Opening hours</h3>
+                <p>Mon-Thurs: 0900-1700</p>
+                <p>Friday: 0900-1300</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Military Hub Help. All rights reserved.</p>
+    </footer>
+    <script src="/js/help.js"></script>
+    
+</body>
+
+</html>

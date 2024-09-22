@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Army Welfare Corpus Education Scholarship supporting military families with professional course tuition fees and book expenses.">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <title>Army Welfare Corpus Education Scholarship</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "EducationalOrganization",
+          "name": "Army Welfare Corpus Education Scholarship",
+          "description": "Supporting the educational aspirations of military families",
+          "url": "https://www.armywelfarecorpus.org",
+          "telephone": "+91 1234567890",
+          "email": "support@armywelfarecorpus.org"
+        }
+        </script>
+        <link rel="stylesheet" href="/css/resources.css">
+</head>
+<body>
+<!-- Topbar Start -->
+  <div class="container-fluid bg-dark text-light p-0">
+    <div class="row gx-0 d-none d-lg-flex">
+      <div class="col-lg-6 px-5 text-start">
+        <div class="h-100 d-inline-flex align-items-center me-4">
+          <small class="fa fa-map-marker-alt text-primary me-2"></small>
+          <small>kolkata</small>
+        </div>
+        <div class="h-100 d-inline-flex align-items-center">
+          <small class="far fa-clock text-primary me-2"></small>
+          <small>Mon - Fri : 09 AM - 09 PM</small>
+        </div>
+      </div>
+      <div class="col-lg-6 px-5 text-end">
+        <div class="h-100 d-inline-flex align-items-center me-4">
+          <small class="fa fa-phone-alt text-primary me-2"></small>
+          <small>+91 7045464099</small>
+        </div>
+        <div class="h-100 d-inline-flex align-items-center">
+          <a class="btn btn-link text-light" href="https://www.facebook.com/share/XjPac8YhaA5qGQE6/?mibextid=qi2Omg"><i class="fab fa-facebook-f"></i></a>
+          <a class="btn btn-link text-light" href=""><i class="fab fa-twitter"></i></a>
+          <a class="btn btn-link text-light" href=""><i class="fab fa-linkedin-in"></i></a>
+          <a class="btn btn-link text-light" href=""><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Topbar End -->
+
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+    <div class="navbar-logo logo" a href="#" style="margin-top: -9px;">
+      <img class="p1" src="/images/logo.png" alt="Logo" style="width: 115; height: 90px;">
+
+      Support Hub
+  </div></a>
+    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto p-4 p-lg-0">
+        <!--<a href="index.html" class="nav-item nav-link">Home</a>-->
+        <a href="/" class="nav-item nav-link text-dark active">Home</a>
+        <!--<a href="#" class="nav-item nav-link">Services</a>
+                    <a href="#" class="nav-item nav-link">Projects</a>
+                    <a href="#" class="nav-item nav-link">Contact</a>-->
+      </div>
+      <a href="https://www.nids.mod.go.jp/english/event/symposium/pdf/2011/e_03.pdf"
+        class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Get A Quote<i class="fa fa-arrow-right ms-3"></i></a>
+    </div>
+  </nav>
+
+
+    <header class="hero-section text-center text-white" style="background-image: url('images/raju_bg2.jpeg'); background-size: cover; background-position: center; height: 50vh;">
+    <div class="container">
+        <h1 class="display-4 animate__animated animate__fadeIn">Army Welfare Corpus Education Scholarship</h1>
+        <p class="lead animate__animated animate__fadeIn animate__delay-1s">Supporting the educational aspirations of our military families</p>
+        <a href="#scholarships" class="btn btn-light btn-lg animate__animated animate__fadeIn animate__delay-2s">Learn More</a>
+    </div>
+</header>
+
+
+
+    <main class="container mt-5">
+        <!-- Scholarship Calculator Section -->
+        <section id="scholarship-calculator" class="card mb-4 animate__animated animate__fadeInUp">
+            <div class="card-header">
+                <h2><i class="bi bi-calculator"></i> <span data-i18n="scholarshipCalculator">Scholarship Calculator</span></h2>
+            </div>
+            <div class="card-body">
+                <form id="calculatorForm">
+                    <div class="mb-3">
+                        <label for="tuitionFee" class="form-label" data-i18n="tuitionFee">Tuition Fee (₹)</label>
+                        <input type="number" class="form-control" id="tuitionFee" required min="0">
+                    </div>
+                    <div class="mb-3">
+                        <label for="booksCost" class="form-label" data-i18n="booksCost">Books Cost (₹)</label>
+                        <input type="number" class="form-control" id="booksCost" required min="0">
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-i18n="calculateScholarship">Calculate Scholarship</button>
+                </form>
+                <div id="calculatorResult" class="mt-3"></div>
+            </div>
+        </section>
+
+    <div class="container mt-5">
+        <div id="scholarships" class="card mb-4 animate__animated animate__fadeInUp">
+            <div class="card-header">
+                <h2><i class="fas fa-graduation-cap"></i> Assistance Resources</h2>
+            </div>
+            <div class="card-body">
+                <h3>Education Scholarship (only for Professional Courses)</h3>
+                <p>Tuition Fee + Rs 5,000/- (for Books) subject to a maximum of Rs 25,000/- p.a</p>
+                
+                <h3>Penury Grant</h3>
+                <p>Penury grant is provided at the rate of Rs. 4000/- per month for life time wef 01 Apr 2017.</p>
+                
+                <h3>Self Employment/Agro based venture</h3>
+                <p>Rs 25,000/-</p>
+            </div>
+        </div>
+        
+        <a href="/apply" class="btn btn-primary mb-4"><i class="fas fa-paper-plane"></i> Apply Now</a>
+
+        <div id="applicationForm" class="card mb-4 d-none animate__animated animate__fadeIn">
+            <div class="card-header">
+                <h2><i class="fas fa-file-alt"></i> Application Form</h2>
+            </div>
+            <div class="card-body">
+                <form id="scholarshipApplication">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="course" class="form-label">Professional Course</label>
+                        <input type="text" class="form-control" id="course" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-send"></i> Submit Application</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Add this section for featured scholars -->
+        <section id="featured-scholars" class="card mb-4 animate__animated animate__fadeInUp">
+            <div class="card-header">
+                <h2><i class="fas fa-star"></i> Featured Scholars</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <img src="scholar1.jpg" alt="Scholar 1" class="img-fluid rounded-circle mb-2" loading="lazy">
+                        <h3>Aarav Sharma</h3>
+                        <p>Engineering, IIT Delhi</p>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <img src="scholar2.jpg" alt="Scholar 2" class="img-fluid rounded-circle mb-2" loading="lazy">
+                        <h3>Priya Patel</h3>
+                        <p>Medicine, AIIMS</p>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <img src="scholar3.jpg" alt="Scholar 3" class="img-fluid rounded-circle mb-2" loading="lazy">
+                        <h3>Rahul Gupta</h3>
+                        <p>Law, National Law School of India University</p>
+                    </div>
+                </div>
+            </div>
+        </section>  
+<!-- Timeline section -->
+<div id="timeline" class="card mb-4 animate__animated animate__fadeInUp">
+    <div class="card-header">
+        <h2><i class="fas fa-clock"></i> Application Timeline</h2>
+    </div>
+    <div class="card-body">
+        <ul class="timeline">
+            <li>
+                <h4>Application Opens</h4>
+                <p>May 1, 2024</p>
+            </li>
+            <li>
+                <h4>Application Deadline</h4>
+                <p>June 30, 2024</p>
+            </li>
+            <li>
+                <h4>Review Process</h4>
+                <p>July 1 - August 15, 2024</p>
+            </li>
+            <li>
+                <h4>Results Announcement</h4>
+                <p>September 1, 2024</p>
+            </li>
+            <li>
+                <h4>Scholarship Disbursement</h4>
+                <p>September 15, 2024</p>
+            </li>
+        </ul>
+    </div>
+</div>
+        
+
+        
+
+    <!-- Add this after the hero section and before the existing content -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h3><i class="fas fa-check-circle"></i> Eligibility Checker</h3>
+                </div>
+                <div class="card-body">
+                    <form id="eligibilityForm">
+                        <div class="mb-3">
+                            <label for="relationship" class="form-label">Relationship to Service Member</label>
+                            <select class="form-select" id="relationship" required>
+                                <option value="">Select relationship</option>
+                                <option value="child">Child</option>
+                                <option value="spouse">Spouse</option>
+                                <option value="sibling">Sibling</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="course" class="form-label">Course Type</label>
+                            <select class="form-select" id="course" required>
+                                <option value="">Select course type</option>
+                                <option value="professional">Professional Course</option>
+                                <option value="other">Other Course</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Check Eligibility</button>
+                    </form>
+                    <div id="eligibilityResult" class="mt-3"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h3><i class="fas fa-search"></i> Search Information</h3>
+                </div>
+                <div class="card-body">
+                    <form id="searchForm">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Enter keywords..." id="searchInput" required>
+                            <button class="btn btn-primary" type="submit">Search</button>
+                        </div>
+                    </form>
+                    <div id="searchResults" class="mt-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add this before the closing </main> tag -->
+<section id="faq" class="card mb-4 animate__animated animate__fadeInUp">
+    <div class="card-header">
+        <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+    </div>
+    <div class="card-body">
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                        Who is eligible for the Education Scholarship?
+                    </button>
+                </h3>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        The Education Scholarship is available for children, spouses, and siblings of service members who are pursuing professional courses.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                        What does the scholarship cover?
+                    </button>
+                </h3>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        The scholarship covers tuition fees plus Rs 5,000/- for books, subject to a maximum of Rs 25,000/- per annum.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                        How long is the Penury Grant provided?
+                    </button>
+                </h3>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        The Penury Grant is provided for life time, effective from 01 Apr 2017, at the rate of Rs. 4000/- per month.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Add a new section for testimonials -->
+    <section id="testimonials" class="card mb-4 animate__animated animate__fadeInUp">
+        <div class="card-header">
+            <h2><i class="fas fa-quote-left"></i> Testimonials</h2>
+        </div>
+        <div class="card-body">
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <blockquote class="blockquote">
+                            <p>"The Army Welfare Corpus Education Scholarship has been a blessing for my family. It allowed me to pursue my engineering degree without financial stress."</p>
+                            <footer class="blockquote-footer">Rahul S., Engineering Student</footer>
+                        </blockquote>
+                    </div>
+                    <div class="carousel-item">
+                        <blockquote class="blockquote">
+                            <p>"As a military spouse, this scholarship helped me advance my career in healthcare. I'm grateful for the support of the Army Welfare Corpus."</p>
+                            <footer class="blockquote-footer">Priya M., Nursing Student</footer>
+                        </blockquote>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <!-- Section 5 -->
+    <div class="main"></div>
+    <footer id="Footer" style="background-color:#b3b3cc;"
+      class="page-footer font-small stylish-color-dark pt-4 medium-font">
+      <div style="background-color:#b3b3cc;" class="container text-center text-md-left">
+        <div class="row">
+          <div class="col-md-4 mx-auto">
+            <!-- Content -->
+            <h5 class="text-uppercase font-weight-bold mt-3 mb-4" style="font-size: 24px;">Our Aim</h5>
+            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 70px;">
+           <p> Our goal is to support those suffering from the loss of a loved one due to battle casualties. This assistance is crucial for bereaved families, addressing financial, educational, medical needs, and encouraging volunteer work.</p>
+          </div>
+          <hr class="clearfix w-100 d-md-none">
+          <div id="link10" class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h5 class="text-uppercase font-weight-bold mt-3 mb-4" style="font-size: 24px;">Services</h6>
+              <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 70px;">
+              <p>
+                <a href="#!">Donate </a>
+              </p>
+              <p>
+                <a href="#!">Community</a>
+              </p>
+              <p>
+                <a href="#!">Volunteer</a>
+              </p>
+              <p>
+                <a href="#!">Memorial</a>
+              </p>
+              <p>
+                <a href="#!">About Us</a>
+              </p>
+          </div>
+          <hr class="clearfix w-100 d-md-none">
+          <div id="link10" class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h5 class="text-uppercase font-weight-bold mt-3 mb-4" style="font-size: 24px;">Useful links</h6>
+              <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 70px;">
+              <p>
+                <a href="https://armedforceshub.com/">Your Account</a>
+              </p>
+              <!-- <p> -->
+                <!-- <a href="#!">Become an Affiliate</a>
+              </p>
+              <p>
+                <a href="#!">Shipping Rates</a>
+               </p> -->
+               <p>
+                <a href="/help/index.html">Help</a>
+              </p>
+          </div>
+          <hr class="clearfix w-100 d-md-none">
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <h5 class="text-uppercase font-weight-bold mt-3 mb-4" style="font-size: 24px;">Contact</h6>
+              <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+              <p>
+                <i class="fas fa-home mr-3"></i> Howrah, West Bengal.
+              </p>
+              <p>
+                <i class="fas fa-envelope mr-3"></i> militarysupporthub@mail.com
+              </p>
+              <p>
+                <i class="fas fa-phone mr-3"></i> + 91 9709781081
+              </p>
+              <p>
+                <i class="fas fa-print mr-3"></i> + 91 6290064231
+              </p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <!-- Call to action -->
+      <ul style="background-color:#b3b3cc;" class="list-unstyled list-inline text-center py-2">
+        <li class="list-inline-item">
+          <h5 class="mb-1" style="font-size: 24px;">Register for free</h5>
+        </li>
+        <li class="list-inline-item">
+          <a href="home.html" class="btn btn-outline-primary btn-rounded" style="font-size: 18px;">Sign up!</a>
+        </li>
+      </ul>
+      <hr>
+    <!-- Social buttons -->
+<!-- Social buttons -->
+<div class="hover-effect1">
+  <ul style="background-color:#b3b3cc;" class="list-unstyled list-inline text-center">
+    <li class="list-inline-item">
+      <a href="https://www.facebook.com/share/XjPac8YhaA5qGQE6/?mibextid=qi2Omg" title="Facebook" aria-label="Facebook">
+        <i class="fa fa-facebook"></i>
+        <span class="sr-only">Facebook</span>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a href="https://www.twitter.com/codewithfaraz" title="Twitter" aria-label="Twitter">
+        <i class="fa fa-twitter"></i>
+        <span class="sr-only">Twitter</span>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a href="https://www.instagram.com/codewithfaraz" title="Instagram" aria-label="Instagram">
+        <i class="fa fa-instagram"></i>
+        <span class="sr-only">Instagram</span>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a href="https://www.youtube.com/@codewithfaraz" title="YouTube" aria-label="YouTube">
+        <i class="fa fa-youtube"></i>
+        <span class="sr-only">YouTube</span>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a href="https://github.com/codewithfaraz" title="GitHub" aria-label="GitHub">
+        <i class="fa fa-github"></i>
+        <span class="sr-only">GitHub</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+      <!-- Copyright -->
+      <div style="background-color:#b3b3cc;" class="footer-copyright text-center py-3">
+        Copyright© 2024: Design and Devloped by Tech Titans
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/resources.js"></script>
+    <script src="js/calculator.js"></script>
+</body>
+</html>
+
+

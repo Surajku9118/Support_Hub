@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin Final - Monthly Gifts</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7f9;
+            color: #333;
+            margin: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        /* Close button (back navigation) */
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: #fff;
+            background-color: #e74c3c;
+            padding: 8px 12px;
+            border-radius: 50%;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .close-btn:hover {
+            background-color: #c0392b;
+        }
+
+        /* Search Bar styling */
+        .search-bar {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+        }
+
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        th {
+            background-color: #3498db;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        td {
+            color: #2c3e50;
+        }
+
+        .total-amount {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            th, td {
+                padding: 10px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            .close-btn {
+                font-size: 20px;
+                padding: 6px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Close button (back to previous page) -->
+<a href="javascript:history.back()" class="close-btn">&times;</a>
+
+<h2>All Monthly Gifts</h2>
+
+<!-- Search Bar -->
+<div class="search-bar">
+    <input type="text" id="search" class="form-control" placeholder="Search by amount, frequency, donor email, or registration ID..." 
+           oninput="filterTable()">
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Amount</th>
+            <th>Frequency</th>
+            <th>Donor Email</th>
+            <th>Registration ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Iterate over each MonthlyGift -->
+        <tr th:each="gift : ${monthlyGifts}">
+            <td th:text="${gift.id}"></td>
+            <td th:text="${gift.amount}"></td>
+            <td th:text="${gift.frequency}"></td>
+            <td th:text="${gift.donorEmail}"></td>
+            <td th:text="${gift.registrationId != null ? gift.registrationId : 'N/A'}"></td>
+        </tr>
+        <!-- Display a message if no monthly gifts are available -->
+        <tr th:if="${#lists.isEmpty(monthlyGifts)}">
+            <td colspan="5">No monthly gifts available.</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="total-amount">
+    Total Amount: <span th:text="${totalAmount != null ? totalAmount : 'N/A'}"></span>
+</div>
+
+<script>
+    function filterTable() {
+        const input = document.getElementById('search');
+        const filter = input.value.toLowerCase();
+        const table = document.querySelector('table');
+        const rows = table.getElementsByTagName('tr');
+
+        for (let i = 1; i < rows.length; i++) { // Start from 1 to skip header
+            const cells = rows[i].getElementsByTagName('td');
+            let found = false;
+
+            // Check relevant columns: amount, frequency, donor email, registration ID
+            for (let j = 1; j < cells.length; j++) { // Start from 1 to skip ID
+                if (cells[j].textContent.toLowerCase().includes(filter)) {
+                    found = true;
+                    break;
+                }
+            }
+
+            rows[i].style.display = found ? '' : 'none';
+        }
+    }
+</script>
+
+</body>
+</html>

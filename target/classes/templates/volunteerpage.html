@@ -1,0 +1,693 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Your Name">
+    <link rel="shortcut icon" href="favicon.png">
+    <meta name="description" content="Military Hub Volunteer Page">
+    <meta name="keywords" content="military, volunteer, support, help">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<!-- Add this line in the <head> section of your HTML -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+        }
+        .logo {
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: 800;
+    color: #080e8e;
+    position: relative;
+    cursor: pointer;
+  }
+  .logo:hover{
+    transform: scale(0.8);
+  }
+  
+  
+  .p-1 {
+    font-size: 2rem;
+    margin-right: 2rem;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .p-2 {
+    font-size: 2rem;
+    color: #bbb;
+    position: absolute;
+    top: 0.4rem;
+    left: 0.5rem;
+  }
+  
+  .blue-btn {
+    width: 35rem;
+    height: 5rem;
+    background-color: #081361;
+    color: #fff;
+    border-radius: 3rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+  .blue-btn:hover{
+    background-color: white;
+    color: #032181;
+  }
+  
+  
+        
+
+        .section {
+            position: relative;
+            padding: 60px 0;
+        }
+
+        .flip-section {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            padding: 100px 0;
+        }
+
+        .secondary-bg {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        .subheading-white {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .heading {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .btn-outline-white {
+            border: 2px solid white;
+            color: white;
+            background-color: transparent;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn-outline-white:hover {
+            background-color: white;
+            color: black;
+        }
+
+
+        .bg-light {
+            background-color: #f8f9fa;
+        }
+
+        .subheading {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .heading {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .counter {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .counter i {
+            font-size: 2rem;
+            color: #6c757d;
+            margin-bottom: 10px;
+        }
+
+        .counter .number {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .counter .d-block {
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .counter {
+                margin-bottom: 20px;
+            }
+        }
+
+        .sec-instagram {
+            background-color: #f8f9fa;
+        }
+
+        .subheading {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .heading {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #000;
+        }
+
+        .instagram-slider {
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+            padding: 10px;
+        }
+
+        .instagram-slider .item {
+            flex: 0 0 auto;
+            width: 100%;
+            max-width: 200px;
+        }
+
+        .instagram-item {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .instagram-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .instagram-item .icon-instagram {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 2rem;
+            z-index: 1;
+        }
+
+        @media (max-width: 768px) {
+            .instagram-slider {
+                flex-direction: column;
+            }
+        }
+
+        /* footer--> */
+<!--footer-->
+.section-5 {
+  width: 100%;
+}
+
+.section-5-top {
+  width: 100%;
+  background-color: #f3f7fa;
+  text-align: center;
+  padding: 7rem 0;
+}
+
+.section-5-top-heading {
+  font-size: 3.5rem;
+  font-weight: 400;
+  margin-bottom: 4rem;
+}
+
+.hover-effect1 {
+  min-height: 20px;
+  background: #F44336;
+  text-align: center;
+}
+
+.hover-effect1 ul {
+  padding-top: 1px;
+}
+
+.hover-effect1 ul li {
+  display: inline-block;
+}
+
+.hover-effect1 ul li a {
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
+  margin: 0px 10px;
+  line-height: 50px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: #dc3545;
+  -webkit-transition: all .6s ease;
+  -moz-transition: all .6s ease;
+  -ms-transition: all .6s ease;
+  -o-transition: all .6s ease;
+  transition: all .6s ease;
+}
+
+.hover-effect1 ul li:hover a {
+  border-radius: 50%;
+  background: #dc3545;
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.copyright {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+    </style>
+
+    <title>Military Hub Volunteer Page</title>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <!-- Topbar Start -->
+  <div class="container-fluid bg-dark text-light p-0">
+    <div class="row gx-0 d-none d-lg-flex">
+      <div class="col-lg-6 px-5 text-start">
+        <div class="h-100 d-inline-flex align-items-center me-4">
+          <small class="fa fa-map-marker-alt text-primary me-2"></small>
+          <small>kolkata</small>
+        </div>
+        <div class="h-100 d-inline-flex align-items-center">
+          <small class="far fa-clock text-primary me-2"></small>
+          <small>Mon - Fri : 09 AM - 09 PM</small>
+        </div>
+      </div>
+      <div class="col-lg-6 px-5 text-end">
+        <div class="h-100 d-inline-flex align-items-center me-4">
+          <small class="fa fa-phone-alt text-primary me-2"></small>
+          <small>+91 7045464099</small>
+        </div>
+        <div class="h-100 d-inline-flex align-items-center">
+          <a class="btn btn-link text-light" href="https://www.facebook.com/share/XjPac8YhaA5qGQE6/?mibextid=qi2Omg"><i class="fab fa-facebook-f"></i></a>
+          <a class="btn btn-link text-light" href=""><i class="fab fa-twitter"></i></a>
+          <a class="btn btn-link text-light" href=""><i class="fab fa-linkedin-in"></i></a>
+          <a class="btn btn-link text-light" href=""><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Topbar End -->
+
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+    <div class="navbar-logo logo" a href="#" style="margin-top: -9px;">
+      <img class="p1" src="/images/logo.png" alt="Logo" style="width: 115; height: 90px;">
+
+      Support Hub
+  </div></a>
+    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto p-4 p-lg-0">
+        <!--<a href="index.html" class="nav-item nav-link">Home</a>-->
+        <a href="/" class="nav-item nav-link text-dark active">Home</a>
+        <!--<a href="#" class="nav-item nav-link">Services</a>
+                    <a href="#" class="nav-item nav-link">Projects</a>
+                    <a href="#" class="nav-item nav-link">Contact</a>-->
+      </div>
+      <a href="https://www.nids.mod.go.jp/english/event/symposium/pdf/2011/e_03.pdf"
+        class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"><i class="fa fa-arrow-left ms-3"  style ="margin-right:10px;"></i>Volunteer</a>
+    </div>
+  </nav>
+
+
+    <!-- Hero Section -->
+    <div class="section flip-section secondary-bg" style="background-image: url('images/volenteer (2).jpeg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 mx-auto text-center">
+                    <span class="subheading-white mb-3 text-white" data-aos="fade-up">Support Our Troops</span>
+                    <h3 class="mb-4 heading text-white" data-aos="fade-up">Join Us in Helping Our Military Families</h3>
+                    <a href="/volunteer" class="btn btn-outline-white me-3" data-aos="fade-up" data-aos-delay="100">Become a Volunteer</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="section" style="background-color:#b0c0ab";>
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-5" data-aos="fade-up">
+                    <span class="subheading mb-3">Our Impact</span>
+                    <h2 class="heading mb-4">Join Us in Supporting Our Troops</h2>
+                    <p>At Military Hub, we are dedicated to making a difference in the lives of those who serve our country. Our mission is to provide support and resources to military personnel and their families, ensuring they receive the care and assistance they deserve.</p>
+                    <p>With your help, we can expand our reach and impact, providing essential services and creating opportunities for those who have dedicated their lives to protecting our freedoms. Join us in our mission to honor and support our brave servicemen and women.</p>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="row section-counter">
+                        <div class="col-lg-6">
+                            <div class="counter">
+                                <i class="flaticon-social-services d-block text-secondary"></i>
+                                <span class="number countup">589</span>
+                                <span class="d-block">New Initiatives</span>
+                            </div>
+                            <div class="counter">
+                                <i class="flaticon-charity-money d-block text-secondary"></i>
+                                <span class="number">$<span class="countup">920</span>M</span>
+                                <span class="d-block">Funds Raised</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="counter mt-5">
+                                <i class="flaticon-money-donation d-block text-secondary"></i>
+                                <span class="number countup">4211</span>
+                                <span class="d-block">Donors</span>
+                            </div>
+                            <div class="counter">
+                                <i class="flaticon-organs-donation d-block text-secondary"></i>
+                                <span class="number countup">389</span>
+                                <span class="d-block">Volunteers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- News Section -->
+    <div class="section p-9 mb-8 pt-0" style="background-color:#b0c0ab";>
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-5 mb-5" data-aos="fade-up">
+                    <span class="subheading mb-1">News Update</span>
+                    <h2 class="heading mb-1">Latest News</h2>
+                    <p>Stay updated with the latest news and stories from our community.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="causes-item bg-white" data-aos="zoom-in" data-aos-delay="100" style="box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; border: 1px solid #ddd;">
+                        <a href="#"><img src="images/Food_1.jpg" alt="Image" class="img-fluid mb-4 rounded" style="height:250px; width:100%;"></a>
+                        <div class="px-4 pb-3 pt-3">
+                            <span class="date">May 11, 2024</span>
+                            <h3><a href="#">Food for the Troops</a></h3>
+                            <p>Join our initiative to provide meals for military personnel stationed away from home.</p>
+							<a href="your-link-here" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="causes-item bg-white" data-aos="zoom-in" data-aos-delay="100" style="box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; border: 1px solid #ddd;">
+                        <a href="#"><img src="images/Education_1.jpg" alt="Image" class="img-fluid mb-4 rounded" style="height:250px; width:100%;"></a>
+                        <div class="px-4 pb-3 pt-3">
+                            <span class="date">April 22, 2024</span>
+                            <h3><a href="#">Educational Support for Veterans</a></h3>
+                            <p>Explore our programs designed to help veterans pursue higher education and career training.</p>
+							<a href="your-link-here" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="causes-item bg-white" data-aos="zoom-in" data-aos-delay="100" style="box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; border: 1px solid #ddd;">
+                        <a href="#"><img src="images/family_su1.png" alt="Image" class="img-fluid mb-4 rounded" style="height:250px; width:100%;"></a>
+                        <div class="px-4 pb-3 pt-3">
+                            <span class="date">March 15, 2024</span>
+                            <h3><a href="#">Support for Military Families</a></h3>
+                            <p>Learn about our support programs designed to assist military families during challenging times.</p>
+							<a href="your-link-here" class="btn btn-primary">Read More</a>
+							
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Instagram Section -->
+     <div class="section sec-instagram pb-0">
+        <div class="container mb-5">
+            <div class="row align-items-center">
+                <div class="col-lg-3" data-aos="fade-up">
+                    <span class="subheading mb-3">Instagram</span>
+                    <h2 class="heading">Follow Our Mission on Instagram</h2>
+                </div>
+                <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+                    <p>Stay updated with our latest activities, events, and volunteer stories through our Instagram feed. Connect with us to see how our community is making a difference in supporting military families and veterans.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="instagram-slider-wrap" data-aos="fade-up" data-aos-delay="200">
+            <div class="instagram-slider" id="instagram-slider">
+
+                <div class="item">
+                    <a class="instagram-item" href="https://www.instagram.com/p/your-post-url" target="_blank">
+                        <span class="icon-instagram">&#xf16d;</span>
+                        <img src="images/instagram1.jpg" alt="Instagram Image 1" class="img-fluid" style="width:100%; height:170px">
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a class="instagram-item" href="https://www.instagram.com/p/your-post-url" target="_blank">
+                        <span class="icon-instagram">&#xf16d;</span>
+                        <img src="images/instagram2.jpg" alt="Instagram Image 2" class="img-fluid" style="width:100%; height:170px">
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a class="instagram-item" href="https://www.instagram.com/p/your-post-url" target="_blank">
+                        <span class="icon-instagram">&#xf16d;</span>
+                        <img src="images/instagram3.jpg" alt="Instagram Image 3" class="img-fluid"  style="width:100%; height:170px">
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a class="instagram-item" href="https://www.instagram.com/p/your-post-url" target="_blank">
+                        <span class="icon-instagram">&#xf16d;</span>
+                        <img src="images/instagram4.jpg" alt="Instagram Image 4" class="img-fluid" style="width:100%; height:170px">
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a class="instagram-item" href="https://www.instagram.com/p/your-post-url" target="_blank">
+                        <span class="icon-instagram">&#xf16d;</span>
+                        <img src="images/instagram5.jpg" alt="Instagram Image 5" class="img-fluid" style="width:100%; height:170px">
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a class="instagram-item" href="https://www.instagram.com/p/your-post-url" target="_blank">
+                        <span class="icon-instagram">&#xf16d;</span>
+                        <img src="images/instagram6.jpg" alt="Instagram Image 6" class="img-fluid" style="width:100%; height:170px">
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a class="instagram-item" href="https://www.instagram.com/p/your-post-url" target="_blank">
+                        <span class="icon-instagram">&#xf16d;</span>
+                        <img src="images/instagram7.jpg" alt="Instagram Image 7" class="img-fluid" style="width:100%; height:170px">
+                    </a>
+                </div>
+                <div class="item">
+                    <a class="instagram-item" href="https://www.instagram.com/p/your-post-url" target="_blank">
+                        <span class="icon-instagram">&#xf16d;</span>
+                        <img src="images/instagram8.jpg" alt="Instagram Image 7" class="img-fluid" style="width:100%; height:170px">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    
+    <!-- Section 5 -->
+    <div class="main"></div>
+    <footer id="Footer" style="background-color:#b3b3cc;"
+      class="page-footer font-small stylish-color-dark pt-4 medium-font">
+      <div style="background-color:#b3b3cc;" class="container text-center text-md-left">
+        <div class="row">
+          <div class="col-md-4 mx-auto">
+            <!-- Content -->
+            <h5 class="text-uppercase font-weight-bold mt-3 mb-4" style="font-size: 24px;">Our Aim</h5>
+            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 70px;">
+           <p> Our goal is to support those suffering from the loss of a loved one due to battle casualties. This assistance is crucial for bereaved families, addressing financial, educational, medical needs, and encouraging volunteer work.</p>
+          </div>
+          <hr class="clearfix w-100 d-md-none">
+          <div id="link10" class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h5 class="text-uppercase font-weight-bold mt-3 mb-4" style="font-size: 24px;">Services</h6>
+              <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 70px;">
+              <p>
+                <a href="#!">Donate </a>
+              </p>
+              <p>
+                <a href="#!">Community</a>
+              </p>
+              <p>
+                <a href="#!">Volunteer</a>
+              </p>
+              <p>
+                <a href="#!">Memorial</a>
+              </p>
+              <p>
+                <a href="#!">About Us</a>
+              </p>
+          </div>
+          <hr class="clearfix w-100 d-md-none">
+          <div id="link10" class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h5 class="text-uppercase font-weight-bold mt-3 mb-4" style="font-size: 24px;">Useful links</h6>
+              <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 70px;">
+              <p>
+                <a href="https://armedforceshub.com/">Your Account</a>
+              </p>
+              <!-- <p> -->
+                <!-- <a href="#!">Become an Affiliate</a>
+              </p>
+              <p>
+                <a href="#!">Shipping Rates</a>
+               </p> -->
+               <p>
+                <a href="/help/index.html">Help</a>
+              </p>
+          </div>
+          <hr class="clearfix w-100 d-md-none">
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <h5 class="text-uppercase font-weight-bold mt-3 mb-4" style="font-size: 24px;">Contact</h6>
+              <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+              <p>
+                <i class="fas fa-home mr-3"></i> Howrah, West Bengal.
+              </p>
+              <p>
+                <i class="fas fa-envelope mr-3"></i> militarysupporthub@mail.com
+              </p>
+              <p>
+                <i class="fas fa-phone mr-3"></i> + 91 9709781081
+              </p>
+              <p>
+                <i class="fas fa-print mr-3"></i> + 91 6290064231
+              </p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <!-- Call to action -->
+      <ul style="background-color:#b3b3cc;" class="list-unstyled list-inline text-center py-2">
+        <li class="list-inline-item">
+          <h5 class="mb-1" style="font-size: 24px;">Register for free</h5>
+        </li>
+        <li class="list-inline-item">
+          <a href="home.html" class="btn btn-outline-primary btn-rounded" style="font-size: 18px;">Sign up!</a>
+        </li>
+      </ul>
+      <hr>
+    <!-- Social buttons -->
+<!-- Social buttons -->
+<div class="hover-effect1">
+  <ul style="background-color:#b3b3cc;" class="list-unstyled list-inline text-center">
+    <li class="list-inline-item">
+      <a href="https://www.facebook.com/share/XjPac8YhaA5qGQE6/?mibextid=qi2Omg" title="Facebook" aria-label="Facebook">
+        <i class="fa fa-facebook"></i>
+        <span class="sr-only">Facebook</span>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a href="https://www.twitter.com/codewithfaraz" title="Twitter" aria-label="Twitter">
+        <i class="fa fa-twitter"></i>
+        <span class="sr-only">Twitter</span>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a href="https://www.instagram.com/codewithfaraz" title="Instagram" aria-label="Instagram">
+        <i class="fa fa-instagram"></i>
+        <span class="sr-only">Instagram</span>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a href="https://www.youtube.com/@codewithfaraz" title="YouTube" aria-label="YouTube">
+        <i class="fa fa-youtube"></i>
+        <span class="sr-only">YouTube</span>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a href="https://github.com/codewithfaraz" title="GitHub" aria-label="GitHub">
+        <i class="fa fa-github"></i>
+        <span class="sr-only">GitHub</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+      <!-- Copyright -->
+      <div style="background-color:#b3b3cc;" class="footer-copyright text-center py-3">
+        Copyright© 2024: Design and Devloped by Tech Titans
+      </div>
+    </footer>
+
+
+
+    <!---Login from--->
+
+
+
+    <!--login from-->
+
+
+    <!--About us-->
+
+
+
+
+
+
+
+    <!-- END of HTML Coding... -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ 
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 1000, // Animation duration in milliseconds
+        });
+
+        // Example countup functionality
+        document.querySelectorAll('.countup').forEach(function(element) {
+            const countUpValue = parseInt(element.textContent.replace(/\D/g, ''));
+            let current = 0;
+            const updateCount = () => {
+                if (current < countUpValue) {
+                    current += Math.ceil(countUpValue / 100);
+                    element.textContent = current;
+                    setTimeout(updateCount, 10);
+                } else {
+                    element.textContent = countUpValue;
+                }
+            };
+            updateCount();
+        });
+    </script>
+</body>
+
+</html>

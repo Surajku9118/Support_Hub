@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fallen Soldiers of India</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #283593;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .hero {
+            background-image: url('hero-image.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero h2 {
+            color: white;
+            font-size: 3rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .story-card {
+            background-color: white;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .story-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .story-card-content {
+            padding: 15px;
+        }
+
+        .story-card h3 {
+            margin-top: 0;
+            color: #283593;
+        }
+
+        .story-card p {
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .slider {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slides img {
+            width: 100%;
+            height: auto;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 3px;
+            user-select: none;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        footer {
+            background-color: #283593;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Honoring India's Fallen Heroes</h1>
+</header>
+
+<div class="hero">
+    <h2>Stories of Courage & Sacrifice</h2>
+</div>
+
+<div class="container">
+    <!-- Slider for fallen soldiers -->
+    <div id="slider" class="slider hidden">
+        <div class="slides" th:each="soldier : ${soldiers}">
+            <img th:src="'data:' + ${soldier.photoContentType} + ';base64,' + ${#strings.encodeBase64(soldier.photo)}" alt="Soldier Photo">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <!-- Display all soldiers -->
+    <div id="soldiers-list">
+        <div th:each="soldier : ${soldiers}" class="story-card">
+            <img th:src="'data:' + ${soldier.photoContentType} + ';base64,' + ${#strings.encodeBase64(soldier.photo)}" alt="Soldier Photo">
+            <div class="story-card-content">
+                <h3 th:text="${soldier.name}"></h3>
+                <p th:text="${soldier.story}"></p>
+                <a th:href="@{/soldiers/{id}(id=${soldier.id})}">View Details</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Detail view for a single soldier -->
+    <div id="soldier-detail" class="hidden">
+        <div th:if="${soldier != null}">
+            <h2 th:text="${soldier.name}"></h2>
+            <img th:src="'data:' + ${soldier.photoContentType} + ';base64,' + ${#strings.encodeBase64(soldier.photo)}" alt="Soldier Photo">
+            <p th:text="${soldier.story}"></p>
+            <a href="#" onclick="showAllSoldiers()">Back to All Soldiers</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Honoring India's Fallen Soldiers</p>
+</footer>
+
+<script>
+    let slideIndex = 0;
+
+    function showSlides() {
+        const slides = document.querySelectorAll('.slides img');
+        slides.forEach(slide => slide.style.display = 'none');
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1; }
+        slides[slideIndex - 1].style.display = 'block';
+    }
+
+    function plusSlides(n) {
+        slideIndex += n;
+        if (slideIndex > slides.length) { slideIndex = 1; }
+        if (slideIndex < 1) { slideIndex = slides.length; }
+        showSlides();
+    }
+
+    function showAllSoldiers() {
+        document.getElementById('soldiers-list').classList.remove('hidden');
+        document.getElementById('soldier-detail').classList.add('hidden');
+        document.getElementById('slider').classList.add('hidden');
+    }
+
+    function showSoldierDetail() {
+        document.getElementById('soldiers-list').classList.add('hidden');
+        document.getElementById('soldier-detail').classList.remove('hidden');
+        document.getElementById('slider').classList.add('hidden');
+    }
+
+    function showSlider() {
+        document.getElementById('soldiers-list').classList.add('hidden');
+        document.getElementById('soldier-detail').classList.add('hidden');
+        document.getElementById('slider').classList.remove('hidden');
+        showSlides(); // Show the first slide
+        setInterval(showSlides, 3000); // Change image every 3 seconds
+    }
+
+    // Example: Call `showSlider()` to display the slider
+    // Call `showAllSoldiers()` or `showSoldierDetail()` based on user interaction
+</script>
+
+</body>
+</html>

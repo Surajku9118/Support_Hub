@@ -1,0 +1,286 @@
+    /* General Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+}
+
+.logo {
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 800;
+    color: #080e8e;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .logo:hover {
+    transform: scale(0.8);
+  }
+  
+  
+  .p-1 {
+    font-size: 30px;
+    margin-right: 2rem;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .p-2 {
+    font-size: 30px;
+    color: #bbb;
+    position: absolute;
+    top: 0.4rem;
+    left: 0.5rem;
+  }
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.nav-link {
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+}
+
+.nav-link.active {
+    color: #007bff;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+/* Features Section */
+.feature {
+    padding: 5rem 0;
+}
+
+.feature .d-flex {
+    align-items: center;
+    justify-content: center;
+}
+
+.feature .d-flex h5 {
+    margin: 0 0 0 1rem;
+}
+
+.feature .display-1 {
+    font-size: 3rem;
+}
+
+/* About Section */
+.about {
+    padding: 5rem 0;
+}
+
+.about-text {
+    padding: 2rem;
+}
+
+.section-title h1 {
+    font-size: 2.5rem;
+}
+
+.btn-lg-square {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+/* Team Section */
+.row.heading h2 {
+    color: #fff;
+    font-size: 52.52px;
+    line-height: 95px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 0 40px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+ul{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.heading.heading-icon {
+    display: block;
+}
+.padding-lg {
+	display: block;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+.practice-area.padding-lg {
+    padding-bottom: 55px;
+    padding-top: 55px;
+}
+.practice-area .inner{ 
+     border:1px solid #999999; 
+	 text-align:center; 
+	 margin-bottom:28px; 
+	 padding:40px 25px;
+}
+.our-webcoderskull .cnt-block:hover {
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    border: 0;
+}
+.practice-area .inner h3{ 
+    color:#3c3c3c; 
+	font-size:24px; 
+	font-weight:500;
+	font-family: 'Poppins', sans-serif;
+	padding: 10px 0;
+}
+.practice-area .inner p{ 
+    font-size:14px; 
+	line-height:22px; 
+	font-weight:400;
+}
+.practice-area .inner img{
+	display:inline-block;
+	
+}
+
+
+.our-webcoderskull{
+  background: url("http://www.webcoderskull.com/img/right-sider-banner.png") no-repeat center top / cover;
+  
+}
+.our-webcoderskull .cnt-block{ 
+   float:left; 
+   width:100%; 
+   background:#fff; 
+   padding:30px 20px; 
+   text-align:center; 
+   border:2px solid #d5d5d5;
+   margin: 0 0 28px;
+}
+.our-webcoderskull .cnt-block figure{
+   width:148px; 
+   height:148px; 
+   border-radius:100%; 
+   display:inline-block;
+   margin-bottom: 15px;
+}
+.our-webcoderskull .cnt-block img{ 
+    width:148px; 
+    height:148px; 
+    border-radius:100%; 
+ }
+ .our-webcoderskull .cnt-block h3{ 
+    color:#2a2a2a; 
+    font-size:20px; 
+    font-weight:500; 
+    padding:6px 0;
+    text-transform:uppercase;
+ }
+ .our-webcoderskull .cnt-block h3 a{
+   text-decoration:none;
+     color:#2a2a2a;
+ }
+ .our-webcoderskull .cnt-block h3 a:hover{
+     color:#337ab7;
+ }
+ .our-webcoderskull .cnt-block p{ 
+    color:#2a2a2a; 
+    font-size:13px; 
+    line-height:20px; 
+    font-weight:400;
+ }
+ .our-webcoderskull .cnt-block .follow-us{
+     margin:20px 0 0;
+ }
+ .our-webcoderskull .cnt-block .follow-us li{ 
+     display:inline-block; 
+     width:auto; 
+     margin:0 5px;
+ }
+ .our-webcoderskull .cnt-block .follow-us li .fa{ 
+    font-size:24px; 
+    color:#767676;
+ }
+ .our-webcoderskull .cnt-block .follow-us li .fa:hover{ 
+    color:#025a8e;
+ }
+
+<!--footer-->
+.section-5 {
+  width: 100%;
+}
+
+.section-5-top {
+  width: 100%;
+  background-color: #f3f7fa;
+  text-align: center;
+  padding: 7rem 0;
+}
+
+.section-5-top-heading {
+  font-size: 3.5rem;
+  font-weight: 400;
+  margin-bottom: 4rem;
+}
+
+.hover-effect1 {
+  min-height: 20px;
+  background: #F44336;
+  text-align: center;
+}
+
+.hover-effect1 ul {
+  padding-top: 1px;
+}
+
+.hover-effect1 ul li {
+  display: inline-block;
+}
+
+.hover-effect1 ul li a {
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
+  margin: 0px 10px;
+  line-height: 50px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: #dc3545;
+  -webkit-transition: all .6s ease;
+  -moz-transition: all .6s ease;
+  -ms-transition: all .6s ease;
+  -o-transition: all .6s ease;
+  transition: all .6s ease;
+}
+
+.hover-effect1 ul li:hover a {
+  border-radius: 50%;
+  background: #dc3545;
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.copyright {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}

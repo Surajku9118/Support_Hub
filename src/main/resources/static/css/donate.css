@@ -1,0 +1,206 @@
+
+        .logo {
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: 800;
+    color: #080e8e;
+    position: relative;
+    cursor: pointer;
+  }
+  .logo:hover{
+    transform: scale(0.8);
+  }
+  
+  
+  .p-1 {
+    font-size: 2rem;
+    margin-right: 2rem;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .p-2 {
+    font-size: 2rem;
+    color: #bbb;
+    position: absolute;
+    top: 0.4rem;
+    left: 0.5rem;
+  }
+  
+  .blue-btn {
+    width: 35rem;
+    height: 5rem;
+    background-color: #081361;
+    color: #fff;
+    border-radius: 3rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+  .blue-btn:hover{
+    background-color: white;
+    color: #032181;
+  }
+   .payment-options {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .payment-details {
+    display: none;
+    margin-top: 15px;
+  }
+
+  .payment-details img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .other-ways-to-donate {
+    margin-top: 20px;
+  }
+
+  .other-ways-to-donate h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .other-ways-to-donate h5 {
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .other-ways-to-donate p {
+    margin-bottom: 10px;
+  }
+
+  #creditCardInfo, #qrCodeInfo, #otherPaymentInfo {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  
+  
+      
+        .info-section {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .header {
+            background-color: #545454;
+            padding: 10px;
+            color: white;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .note-section {
+            border: 1px solid green;
+            padding: 10px;
+            margin: 20px 0;
+        }
+        .note-section p {
+            color: red;
+            margin: 0;
+        }
+        .red-asterisk {
+            color: red;
+        }
+        .small-text {
+            font-size: 12px;
+            color: #777;
+        }
+        #terms {
+            height: 100px;
+            resize: none;
+        }
+        #confirmationModal .modal-body table {
+            width: 100%;
+        }
+        #confirmationModal .modal-body table th {
+            width: 30%;
+            font-weight: bold;
+        }
+        .form-label {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .red-asterisk {
+        color: red;
+    }
+
+    .form-control,
+    .form-select,
+    .form-textarea {
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+    }
+
+    .error-message {
+        color: red;
+        font-size: 0.875em;
+    }
+
+    .form-text {
+        font-size: 0.875em;
+        color: #6c757d;
+    }
+
+    .form-container {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .form-container .row {
+        margin-bottom: 15px;
+    }
+
+    .form-container .col-md-4,
+    .form-container .col-md-6 {
+        margin-bottom: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+        
+        
+        

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Donation Receipt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .receipt-container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #4CAF50;
+            text-align: center;
+        }
+        .details {
+            margin: 20px 0;
+            font-size: 16px;
+            color: #333;
+        }
+        .details p {
+            margin: 10px 0;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="receipt-container">
+        <h2>Donation Receipt</h2>
+        <div class="details">
+            <p><strong>Donor Name:</strong> <span th:text="${monthlyGift.donorName}"></span></p>
+            <p><strong>Donor Email:</strong> <span th:text="${monthlyGift.donorEmail}"></span></p>
+            <p><strong>Donation Amount:</strong> $<span th:text="${monthlyGift.amount}"></span></p>
+            <p><strong>Donation Frequency:</strong> <span th:text="${monthlyGift.frequency}"></span></p>
+            <p><strong>Donation Date:</strong> <span th:text="${#dates.format(new java.util.Date(), 'yyyy-MM-dd')}"></span></p>
+        </div>
+        <div class="button-container">
+            <a href="/monthly-gift" class="back-button">Make Another Donation</a>
+        </div>
+    </div>
+</body>
+</html>

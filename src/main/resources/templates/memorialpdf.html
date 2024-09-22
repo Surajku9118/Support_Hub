@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>All Memorials</title>
+<style>
+/* General reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #f0f4f8;
+	color: #333;
+	padding: 20px;
+	line-height: 1.6;
+	position: relative;
+}
+
+/* Title styling */
+h1 {
+	text-align: center;
+	font-size: 3em;
+	margin-bottom: 20px;
+	color: #28a745;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+	font-weight: 700;
+}
+
+/* Table container */
+.table-container {
+	position: relative;
+	max-width: 1200px;
+	margin: 40px auto;
+}
+
+/* Table styling */
+table {
+	width: 100%;
+	border-collapse: collapse;
+	background-color: white;
+	border: 2px solid #28a745;
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+table thead tr {
+	background: linear-gradient(45deg, #28a745, #218838);
+	color: white;
+	text-align: left;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+/* Header cells */
+table th {
+	padding: 15px;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+/* Row styling */
+table tbody tr {
+	transition: all 0.3s ease;
+	border-bottom: 1px solid #ddd;
+}
+
+/* Hover effect for rows */
+table tbody tr:hover {
+	background-color: #f9f9f9;
+	transform: scale(1.01);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Alternate row background */
+table tbody tr:nth-of-type(even) {
+	background-color: #fafafa;
+}
+
+/* Table data cells */
+table td {
+	padding: 15px;
+	position: relative;
+	font-size: 1em;
+	color: #555;
+	border-bottom: 1px solid #ddd;
+}
+
+/* Floating close button */
+.close-btn {
+	background-color: #ff6b6b;
+	color: white;
+	border: none;
+	font-size: 24px;
+	font-weight: bold;
+	cursor: pointer;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: -20px;
+	right: -20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: background-color 0.3s ease;
+	text-decoration: none; /* Remove underline */
+}
+
+.close-btn:hover {
+	background-color: #ff4b4b;
+}
+
+/* Image styling */
+table img {
+	max-width: 80px;
+	height: auto;
+	border-radius: 8px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+}
+
+table img:hover {
+	transform: scale(1.1);
+}
+
+/* Responsive styling for smaller screens */
+@media ( max-width : 768px) {
+	table thead {
+		display: none;
+	}
+	table, table tbody, table tr, table td {
+		display: block;
+		width: 100%;
+	}
+	table tr {
+		margin-bottom: 20px;
+		background-color: white;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+		border-radius: 10px;
+	}
+	table td {
+		text-align: right;
+		padding-left: 50%;
+		position: relative;
+		font-size: 1.2em;
+	}
+	table td::before {
+		content: attr(data-label);
+		position: absolute;
+		left: 15px;
+		width: 50%;
+		padding-left: 15px;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: rgb(0, 128, 0);
+	}
+	table td {
+		border-bottom: none;
+	}
+}
+</style>
+</head>
+<body>
+	<h1>All Memorials</h1>
+	<div class="table-container">
+		<table>
+			<thead>
+				<tr>
+					<th>Hero's Name</th>
+					<th>Rank</th>
+					<th>Branch of Service</th>
+					<th>Date of Sacrifice</th>
+					<th>Tribute</th>
+					<th>Photo</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="memorial : ${memorials}">
+					<td data-label="Hero's Name" th:text="${memorial.heroName}"></td>
+					<td data-label="Rank" th:text="${memorial.heroRank}"></td>
+					<td data-label="Branch of Service" th:text="${memorial.heroBranch}"></td>
+					<td data-label="Date of Sacrifice"
+						th:text="${memorial.dateOfSacrifice}"></td>
+					<td data-label="Tribute" th:text="${memorial.tribute}"></td>
+					<td data-label="Photo"><img
+						th:src="@{/memorial/photo/{id}(id=${memorial.id})}" alt="Photo">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<a href="javascript:history.back()" class="close-btn">&times;</a>
+
+	</div>
+	<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the floating close button
+            const closeButton = document.querySelector('.close-btn');
+            
+            // Add event listener to the button
+            closeButton.addEventListener('click', function() {
+                // Hide or remove the table container
+                const tableContainer = document.querySelector('.table-container');
+                tableContainer.style.display = 'none'; // Hide the entire table
+                // or use tableContainer.remove(); // To completely remove the table from the DOM
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Military Support Hub</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <!-- Link to Slick Slider CSS -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <!-- Link to Slick Slider theme CSS -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+  <!-- Your custom CSS styles -->
+  <!--Bootstrap CDN-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<!-- Add this line in the <head> section of your HTML -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <!--Fontawesome
+  <script src="https://kit.fontawesome.com/4d0b4c932e.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>-->
+
+
+</head>
+
+<body>
+
+
+  <!-- start of HTML Coding... -->
+  <!-- Topbar Start -->
+  <div class="container-fluid bg-dark text-light p-0 medium-height">
+    <!-- <img src="images/Ashok Chakra1.PNG" alt="" height="60px" width="60px"> -->
+    <div class="row gx-0 d-none d-lg-flex">
+      <div class="col-lg-6 px-5 text-start">
+        <div class="h-100 d-inline-flex align-items-center me-4">
+          <small class="fa fa-map-marker-alt text-primary me-2 text-large" style="font-size:20px;"></small>
+          <small class="text-large">Kolkata</small>
+        </div>
+        <div class="h-100 d-inline-flex align-items-center">
+          <small class="far fa-clock text-primary me-2 text-large"></small>
+          <small class="text-large">Mon - Fri : 09 AM - 09 PM</small>
+        </div>
+      </div>
+      <div class="col-lg-6 px-5 text-end">
+        <div class="h-100 d-inline-flex align-items-center me-4">
+          <small class="text-large">Help Line</small>
+
+          <small class="fa fa-phone-alt text-primary me-2 text-" style="font-size:20px;"></small>
+          <small class="text-large">+91 7045464099</small>
+        </div>
+        <div class="h-100 d-inline-flex align-items-center">
+          <a class="btn btn-link text-light text-large" href="https://www.facebook.com/share/XjPac8YhaA5qGQE6/?mibextid=qi2Omg"><i class="fab fa-facebook-f"></i></a>
+          <a class="btn btn-link text-light text-large" href="#"><i class="fab fa-twitter"></i></a>
+          <a class="btn btn-link text-light text-large" href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a class="btn btn-link text-light text-large" href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Topbar End -->
+
+
+
+  <!-- Front Page -->
+  <div class="front-page">
+
+
+
+    <!-- Section 1 -->
+    <section class="section-1">
+
+      <div class="slider">
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+      </div>
+
+      <div class="navbar-wrapper">
+        <nav class="navbar">
+          <div class="menu">
+            <div class="menu-icon">
+              <div class="line line-1"></div>
+              <div class="line line-2"></div>
+              <div class="line line-3"></div>
+            </div>
+            <span>Menu</span>
+          </div>
+          <div class="navbar-logo logo" a href="#" style="margin-top: -9px;" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+          <img class="p1" src="images/logo.png" alt="Logo" style="width: 115; height: 90px; font-size: 10px;">Support Hub</div></a>
+          <ul class="nav-list animate__animated animate__bounce animate__delay-.5s animate__headShake">
+            <li class="nav-list-item dropdown-hover">
+              <a href="/donate" class="nav-list-link show-dropdown" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">Donate </a>
+              <ul class="nav-dropdown nav-dropdown-personal">
+                <li class="nav-dropdown-item dropdown-heading">
+                  <a href="#" class="dropdown-heading-link"> Donate</a>
+                </li>
+                <li class="nav-dropdown-item">
+                  <a href="images/donation.pdf" class="nav-dropdown-link-3">Ways to Donate Money >></a>
+                  <a href="/monthly-gift" class="nav-dropdown-link-2">Make a Monthly Gift</a>
+                </li>
+                <li class="nav-dropdown-item">
+                  <a href="images/Vicel_donation.pdf" class="nav-dropdown-link-3">Other Ways to Donate >></a>
+                  <a href="https://careasy.org/nonprofit/hope-restored-india" class="nav-dropdown-link-2">Donate a Vehicle</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-list-item dropdown-hover">
+              <a href="/community" class="nav-list-link show-dropdown" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">Community</a>
+              <ul class="nav-dropdown nav-dropdown-business">
+                <li class="nav-dropdown-item dropdown-heading">
+                  <a href="#" class="dropdown-heading-link">Community</a>
+                <li class="nav-dropdown-item">
+                  <a href="community#Support-networks" class="nav-dropdown-link-3">Support Networks >></a>
+                  <a href="community#local_resources" class="nav-dropdown-link-2">Local Resources</a>
+                 <!--<li class="nav-dropdown-item">
+                  <a href="community#comiunity_outreach" class="nav-dropdown-link-3">Community Outreach >></a>
+                 <a href="#" class="nav-dropdown-link-1">Partnerships</a>-->
+                </li>
+              </ul>
+            </li>
+            <li class="nav-list-item dropdown-hover">
+              <a href="/applicationList" class="nav-list-link show-dropdown" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">Resources</a>
+              <ul class="nav-dropdown nav-dropdown-business">
+                <li class="nav-dropdown-item dropdown-heading">
+                  <a href="#" class="dropdown-heading-link">Resources</a>
+                <li class="nav-dropdown-item">                 
+                  <a href="./Resources/apply.html" class="nav-dropdown-link-3"> Financial Assistance >></a>
+                  <a href="#" class="nav-dropdown-link-1">Benefits and how to apply</a>
+                   </li>
+                   <li class="nav-dropdown-item"> 
+                  <a href="./Resources/index.html" class="nav-dropdown-link-3">Educational Resources</a>
+                  <a href="./Resources/index.html" class="nav-dropdown-link-1"> Scholarships and educational
+                    support</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-list-item dropdown-hover">
+              <a href="/volunteerpage" class="nav-list-link show-dropdown" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">Volunteer</a>
+              <ul class="nav-dropdown nav-dropdown-business">
+                <li class="nav-dropdown-item dropdown-heading">
+                  <a href="/volunteer" class="dropdown-heading-link">Volunteer</a>
+                <li class="nav-dropdown-item">
+                  <a href="/getinvolved" class="nav-dropdown-link-3">How to Get Involved >></a>
+                  <a href="getinvolved#application-process" class="nav-dropdown-link-1">Application Process</a>
+                  <a href="getinvolved#requirements" class="nav-dropdown-link-1">Requirements</a>
+				</li>
+				<!--<li class="nav-dropdown-item">
+                  <a href="getinvolved#" class="nav-dropdown-link-3">Volunteer Events >></a>
+                  <a href="getinvolved#upcoming-events" class="nav-dropdown-link-1">Upcoming Events</a>
+                  <a href="getinvolved#" class="nav-dropdown-link-1">Past Events</a>
+				</li>-->
+              </ul>
+            </li>
+            <li class="nav-list-item dropdown-hover">
+              <a href="/memorials" class="nav-list-link show-dropdown" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">Memorials</a>
+              <ul class="nav-dropdown nav-dropdown-business">
+                <li class="nav-dropdown-item dropdown-heading">
+                  <a href="/memorials" class="dropdown-heading-link">Memorials</a>
+                <li class="nav-dropdown-item">
+                  <a href="#" class="nav-dropdown-link-3">Tributes</a>
+                  <a href="#" class="nav-dropdown-link-1">Stories and photos of fallen soldiers</a>
+                  <a href="#" class="nav-dropdown-link-1">Families to add their own tributes</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-list-item dropdown-hover">
+              <a href="/about" class="nav-list-link show-dropdown" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">About</a>
+              <ul class="nav-dropdown nav-dropdown-business">
+                <li class="nav-dropdown-item dropdown-heading">
+                <a href="/about" class="dropdown-heading-link">About</a>
+              
+                <li class="nav-dropdown-item">
+                  <a href="about#webcoders-section" class="nav-dropdown-link-3">Our Team >></a>
+                  <a href="#" class="nav-dropdown-link-1">Profiles</a>
+                  <a href="#" class="nav-dropdown-link-2">Photos</a>
+                </li>
+              </ul>
+            </li>
+          </ul>       
+<div>
+<h1 style="font-family: Arial, sans-serif; color: #2c3e50; font-size: 24px;">
+        Welcome, <span th:text="${username}" style="color: #2980b9;">Guest</span>!
+    </h1>
+ <p style="font-family: Arial, sans-serif; font-size: 18px; color: #34495e;">
+        Your registration ID is: <span th:text="${registrationId}" style="font-weight: bold; color: #e74c3c;">ID not available</span>
+    </p>
+        </div>
+    
+    <div style="display: flex; align-items: center; margin-right: -20px;">
+        <!-- User Icon with Green Light -->
+        <div style="position: relative; display: flex; align-items: center;">
+            <a href="/profile" style="text-decoration: none;">
+                <img src="images/profile1.gif" alt="Profile Image" class="profile-image" style="height:40px; width:40px;display: block; border-radius: 80%; object-fit: cover; border: 2px solid #007bff; margin-top:-12px;">
+            </a>
+        </div>
+    </div>
+
+    <!-- Logout and User Profile Section -->
+    <div th:if="${#authorization.expression('isAuthenticated()')}" class="navbar-buttons" id="logoutButton" style="margin-top:-20px; font-size:30px; margin-right: -90px;">
+    <!-- Logout success message -->
+    <div class="form-group text-success">
+        <p th:if="${param.logout}" th:text="'You have been logged out successfully.'"></p>
+    </div>
+
+    <!-- Logout button -->
+    <form th:action="@{/logout}" method="post">
+        <button type="submit" class="navbar-btn login-btn login" style="font-weight:1000;">Log out</button>
+    </form>
+</div>
+
+        </nav> 
+        
+        
+        
+        
+              
+      </div>
+      <div class="marquee" >
+  			<span><img src="images/new_gif.gif" style="height:50px; width:70px"><a href="https://www.govinfo.gov/content/pkg/ERIC-ED467082/pdf/ERIC-ED467082.pdf" style="color:#de2525;">Families are encouraged to reach out to these entities to fully utilize the available services and support systems</a><img src="images/new_gif.gif" style="height:50px; width:70px"></span>
+		</div>
+
+
+      <div class="banner">
+        <div class="ban-t" data-aos="zoom-in-right" data-aos-delay="100" data-aos-duration="1000">
+          <h1 class="banner-heading">
+            You can Donate
+          </h1>
+          <p class="banner-paragraph">Your financial gift helps people affected by disasters big and small.</p>
+          <a href="/monthly-gift"><button class="blue-btn login" id="donateButton">DONATE NOW</button></a>
+		</div>
+		
+          <div class="video-container">
+            <video id="myVideo" controls muted style="width: 500px; height: 300px;display: none; margin-left: 150px;  position:relative;">
+              <source src="images/help.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="pl">
+              <a class="play-btn" href="#banner"></a>
+            </div>
+            <div class="close-btn" style="display: none; font-weight: 800; font-size: 20px; margin-top: -310px; color: white; margin-right:200px;">&#10005;</div>
+          </div>
+      </div>
+    </section>
+    <!-- End of Section 1 -->/
+    <main>
+      <section class="bg-01">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="wrapper">
+                <div class="row">
+                  <div class="col-lg-4 col-md-4 col-sm-6 ">
+                    <div class="content" >
+                      <ol>
+                        <li class="dashed" style="font-size: 20;">
+                          <i class="fas fa-hands-helping" style="font-size: 60px;"></i>
+                          <h3 style="font-size: 35px;">Make Donation</h3>
+                          <p style="font-size: 15px;">Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry.</p>
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="content">
+                      <ol>
+                        <li class="dashed">
+                          <i class="fas fa-hand-holding-usd" style="font-size: 60px;"></i>
+                          <h3 style="font-size: 35px;">Fundraising</h3>
+                          <p style="font-size: 15px;">Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry.</p>
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="content">
+                      <ol>
+                        <li>
+                          <i class="fas fa-user-friends" style="font-size: 60px;"></i>
+                          <h3 style="font-size: 35px;">Become A Volunteer</h3>
+                          <p style="font-size: 15px;">Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry.</p>
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Section i -->
+    <div class="container-ner">
+    <div class="program" style="width: 500px; height: 420px; margin-left: 150px; margin-top: 100px; flex-wrap: wrap;" data-aos="zoom-in-right" data-aos-delay="100" data-aos-duration="1000">
+        <img src="images/support2.jpg" alt="Program 1" class="img-fluid rounded" id="program-image">
+        <h2 style="font-size: 40px;">Immediate Support</h2>
+        <div class="dates">
+            <button class="btn btn-warning btn-sm">01/08/2024</button>
+        </div>
+        <button class="btn btn-primary mt-3" id="learn-more-btn">Learn more</button>
+
+        <!-- Hidden paragraph to show when "Learn more" is clicked -->
+        <p id="additional-info" style="display: none; font-size: medium; font-weight: 600;">
+            Immediate support for families of battle casualties includes grief counseling to help process emotions, financial assistance for funeral costs and other needs, legal aid for navigating benefits and claims, emotional and social support through support groups and community resources, practical help with daily tasks, and guidance on accessing military or government benefits. Various military support organizations, veteran groups, and government agencies typically provide these services to assist families during their challenging times.
+            <a href="https://pib.gov.in/newsite/printrelease.aspx?relid=146000#:~:text=VEcare%20%3A%20Army%20helpline%20for%20Veterans&text=Headquarters%20Eastern%20Command%20launched%20a,of%20serving%20and%20retired%20soldiers.">visit site</a>
+        </p>
+        <!-- Hidden "Back" button -->
+        <button class="btn btn-secondary mt-3" id="back-btn" style="display: none;">Back</button>
+    </div>
+</div>
+
+<script>
+    document.getElementById("learn-more-btn").addEventListener("click", function() {
+        // Remove the image
+        var image = document.getElementById("program-image");
+        if (image) {
+            image.style.display = "none";
+        }
+
+        // Show the additional paragraph
+        var additionalInfo = document.getElementById("additional-info");
+        if (additionalInfo) {
+            additionalInfo.style.display = "block";
+        }
+
+        // Hide the "Learn more" button and show the "Back" button
+        this.style.display = "none";
+        var backButton = document.getElementById("back-btn");
+        if (backButton) {
+            backButton.style.display = "block";
+        }
+    });
+
+    document.getElementById("back-btn").addEventListener("click", function() {
+        // Show the image
+        var image = document.getElementById("program-image");
+        if (image) {
+            image.style.display = "block";
+        }
+
+        // Hide the additional paragraph
+        var additionalInfo = document.getElementById("additional-info");
+        if (additionalInfo) {
+            additionalInfo.style.display = "none";
+        }
+
+        // Hide the "Back" button and show the "Learn more" button
+        this.style.display = "none";
+        var learnMoreButton = document.getElementById("learn-more-btn");
+        if (learnMoreButton) {
+            learnMoreButton.style.display = "block";
+        }
+    });
+</script>
+
+    <div data-aos="zoom-in-right" data-aos-delay="100" data-aos-duration="1000" style="margin-left: 1000px;  text-align: justify; position: absolute; margin-top: -310px;width: 500px; ">
+      <p style="font-size: medium; font-weight: 600;" >Medical assistance for families of battle casualties involves
+        providing immediate and ongoing healthcare support to help them cope with the physical and psychological impacts
+        of their loss. This includes access to emergency medical care for acute stress reactions, ongoing mental health
+        services such as counseling and therapy to address grief and trauma, and medical coverage for any health issues
+        exacerbated by the stress of losing a loved one. Ensuring that families have comprehensive healthcare resources
+        is crucial for their long-term well-being and recovery.</p>
+    </div>
+</div>
+
+<div class="container-ner">
+    <div class="program" style="width: 500px;height: 420px; margin-left: 800px; position:relative; margin-top: 90px;" data-aos="zoom-in-right" data-aos-delay="100" data-aos-duration="1000">
+    <img src="images/support1.jpg" alt="Program 1" class="img-fluid rounded" id="programImage">
+    <h2 style="font-size:40px;">Long-term Follow-up</h2>
+    <div class="dates">
+        <button class="btn btn-warning btn-sm">01/08/2024</button>
+    </div>
+    <button class="btn btn-primary mt-3" id="learnMoreButton">Learn more</button>
+    <!-- Paragraph hidden by default -->
+    <div id="moreContent" style="display:none;">
+        <p style="font-size: medium; font-weight: 600;">Long-term follow-up for families of battle casualties focuses on providing ongoing support as they adapt to life after their loss. This includes continued grief counseling, financial planning assistance, and support for long-term needs such as education or career development. Regular check-ins and connections with support networks ensure families do not face their challenges alone.
+   <a href="https://www.veteransindia.com/">visit site</a></p>
+        <button class="btn btn-secondary mt-3" id="backButton">Back</button>
+    </div>
+</div>
+
+<script>
+    document.getElementById("learnMoreButton").addEventListener("click", function() {
+        // Hide the image and Learn more button
+        document.getElementById("programImage").style.display = "none";
+        document.getElementById("learnMoreButton").style.display = "none";
+        
+        // Show the paragraph and Back button
+        document.getElementById("moreContent").style.display = "block";
+    });
+
+    document.getElementById("backButton").addEventListener("click", function() {
+        // Show the image and Learn more button
+        document.getElementById("programImage").style.display = "block";
+        document.getElementById("learnMoreButton").style.display = "block";
+        
+        // Hide the paragraph and Back button
+        document.getElementById("moreContent").style.display = "none";
+    });
+</script>
+
+    <div data-aos="fade-up" data-aos-delay="100" style="margin-left: 150px; text-align: justify; position: absolute;width: 500px;margin-top: -350px;width: 500px;">
+      <p style="font-size: medium; font-weight: 600;">Long-term follow-up is crucial to ensure that families of battle
+        casualties continue to receive the necessary support as they navigate their new reality. Regular check-ins by
+        dedicated support personnel can help assess the evolving needs of these families and provide ongoing assistance,
+        whether it's emotional support, financial guidance, or help with accessing resources. This continuous engagement
+        can also help families feel valued and remembered, especially during significant dates such as anniversaries or
+        birthdays, which can be particularly challenging. By maintaining a consistent line of communication and support,
+        organizations can ensure that families do not feel isolated and can thrive despite their loss.</p>
+    </div>
+</div>
+
+<div style="height:40px;"></div>
+    <div class="container-ner">
+      <div class="programs">
+          <div class="pro-3"  data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">  
+        <div class="program">
+          <img src="images/support.JPG" alt="Program 1" class="img-fluid rounded">
+          <h2>Information and Advocacy</h2>
+          <div class="dates">
+            <button class="btn btn-warning btn-sm">01/08/2024</button>
+          </div>
+          <button class="btn btn-primary mt-3">Learn more</button>
+        </div>
+        </div>
+
+    <div class="pro-4"  data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+        <div class="program">
+          <img src="images/support3.jpg" alt="Program 3" class="img-fluid rounded">
+          <h2>Organizations and Programs
+          </h2>
+          <div class="dates">
+            <button class="btn btn-warning btn-sm">01/08/2024</button>
+          </div>
+          <button class="btn btn-primary mt-3">Learn more</button>
+        </div>
+        </div>
+        
+            <div class="pro-5"  data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+        
+        <div class="program">
+          <img src="images/support4.jpg" alt="Program 3" class="img-fluid rounded">
+          <h2>Educational Support</h2>
+          <div class="dates">
+            <button class="btn btn-warning btn-sm">01/08/2024</button>
+          </div>
+          <a href="https://www.education.gov.in/sites/upload_files/mhrd/files/upload_document/pmusp_stu.pdf"><button class="btn btn-primary mt-3">Learn more</button></a>
+        </div>
+      </div>
+      </div>
+    </div>
+     <!-- Section i -->
+
+
+    <!-- Section a -->
+    <section id="section-a">
+      <div class="ag-offer-block" data-aos="fade-up" data-aos-delay="100">
+        <div class="ag-format-container">
+          <ul class="ag-offer_list">
+            <li class="ag-offer_item">
+              <div class="ag-offer_visible-item">
+                <div class="ag-offer_img-box">
+                  <img src="https://raw.githack.com/SochavaAG/example-mycode/master/pens/1_images/icon-64-1.svg"
+                    class="ag-offer_img" alt="" />
+                </div>
+                <div class="ag-offer_title">
+                  Organizations
+                </div>
+              </div>
+              <div class="ag-offer_hidden-item">
+                <a href="#" class="ag-offer_btn">
+                  Learn More
+                </a>
+              </div>
+            </li>
+            <li class="ag-offer_item">
+              <div class="ag-offer_visible-item">
+                <div class="ag-offer_img-box">
+                  <img src="https://raw.githack.com/SochavaAG/example-mycode/master/pens/1_images/icon-64-2.svg"
+                    class="ag-offer_img" alt="" />
+                </div>
+                <div class="ag-offer_title">
+                  Scholarships and Grants
+                </div>
+              </div>
+              <div class="ag-offer_hidden-item">
+                <a href="#" class="ag-offer_btn">
+                  Learn More
+                </a>
+              </div>
+            </li>
+            <li class="ag-offer_item">
+              <div class="ag-offer_visible-item">
+                <div class="ag-offer_img-box">
+                  <img src="https://raw.githack.com/SochavaAG/example-mycode/master/pens/1_images/icon-64-3.svg"
+                    class="ag-offer_img" alt="" />
+                </div>
+                <div class="ag-offer_title">
+                  Mentorship Programs
+                </div>
+              </div>
+              <div class="ag-offer_hidden-item">
+                <a href="#" class="ag-offer_btn">
+                  Learn More
+                </a>
+              </div>
+            </li>
+            <li class="ag-offer_item">
+              <div class="ag-offer_visible-item">
+                <div class="ag-offer_img-box">
+                  <img src="https://raw.githack.com/SochavaAG/example-mycode/master/pens/1_images/icon-64-4.svg"
+                    class="ag-offer_img" alt="" />
+                </div>
+                <div class="ag-offer_title">
+                  Partnerships with Educational Institutions
+                </div>
+              </div>
+              <div class="ag-offer_hidden-item">
+                <a href="#" class="ag-offer_btn">
+                  Learn More
+                </a>
+              </div>
+            </li>
+            <li class="ag-offer_item">
+              <div class="ag-offer_visible-item">
+                <div class="ag-offer_img-box">
+                  <img src="https://raw.githack.com/SochavaAG/example-mycode/master/pens/1_images/icon-64-5.svg"
+                    class="ag-offer_img" alt="" />
+                </div>
+                <div class="ag-offer_title">
+                  Online Learning Resources
+                </div>
+              </div>
+              <div class="ag-offer_hidden-item">
+                <a href="#" class="ag-offer_btn">
+                  Learn More
+                </a>
+              </div>
+            </li>
+            <li class="ag-offer_item">
+              <div class="ag-offer_visible-item">
+                <div class="ag-offer_img-box">
+                  <img src="https://raw.githack.com/SochavaAG/example-mycode/master/pens/1_images/icon-64-6.svg"
+                    class="ag-offer_img" alt="" />
+                </div>
+                <div class="ag-offer_title">School Supplies</div>
+              </div>
+              <div class="ag-offer_hidden-item">
+                <a href="#" class="ag-offer_btn">
+                  Donate Now
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- End of Section 2 -->
+    
+     <!--end Section i -->
+    <section class="get-involved">
+      <div class="container">
+        <h2 style="font-size: 40px;">Where you can get involved</h2>
+        <div class="houses">
+          <div class="house" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+          <img alt="logo" src="images/Veterans_Affairs (VA).png" style="height:85p;">
+            <h3>Veterans' Organizations</h3>
+            <p>COORDINATED BY</p>
+            <p>Department of Veterans Affairs (VA)</p>
+			<a href="https://in.usembassy.gov/" class="btn btn-primary mt-3" role="button">Learn more</a>
+          </div>
+
+          <div class="house" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+            <img alt="logo" src="images/Warrior_Project (WWP).png" style=height:85px;>
+            <h3>Nonprofits and Charities</h3>
+            <p>COORDINATED BY</p>
+            <p>Wounded Warrior Project (WWP)</p>
+			<a href="https://www.woundedwarriorproject.org/" class="btn btn-primary mt-3" role="button">Learn more</a>
+          </div>
+
+          <div class="house" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+           <img alt="logo" src="images/House_Foundation.png" style=height:85px;>
+            <h3>Local Support Groups</h3>
+            <p>COORDINATED BY</p>
+            <p>Fisher House Foundation</p>
+			<a href="https://fisherhouse.org/" class="btn btn-primary mt-3" role="button">Learn more</a>
+          </div>
+
+          <div class="house" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+          <img alt="logo" src="images/Indian_Legion.jpeg" style=height:85px;>
+            <h3>Government Resources</h3>
+            <p>COORDINATED BY</p>
+            <p>Indian Legion</p>
+			<a href="https://en.wikipedia.org/wiki/Indian_Legion/" class="btn btn-primary mt-3" role="button">Learn more</a>
+          </div>
+
+          <div class="house" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+          <img alt="logo" src="images/Foreign_Wars (VFW).jpeg" style=height:85px;> 
+            <h3>Online Communities</h3>
+            <p>COORDINATED BY</p>
+            <p>Veterans of Foreign Wars (VFW)</p>
+			<a href="https://vfwin.org/di/vfw/v2/default.asp" class="btn btn-primary mt-3" role="button">Learn more</a>
+          </div>
+
+          <div class="house" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+ 		  <img alt="logo" src="images/Operation_Homefront.jpeg" style=height:85px;>
+            <h3>Counseling Services</h3>
+            <p>COORDINATED BY</p>
+            <p>Operation Homefront</p>
+			<a href="https://operationhomefront.org/" class="btn btn-primary mt-3" role="button">Learn more</a>
+          </div>
+
+          <div class="house" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+			<img alt="logo" src="images/Program_Survivors (TAPS).png" style=height:85px;>
+            <h3>Volunteer Opportunities</h3>
+            <p>COORDINATED BY</p>
+            <p>Tragedy Assistance Program for Survivors (TAPS)</p>
+			<a href="https://www.taps.org/" class="btn btn-primary mt-3" role="button">Learn more</a>
+          </div>
+
+          <div class="house" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+            <img alt="logo" src="images/Blue_Star_Families.png" style=height:85px;>
+            <h3>Educational Programs</h3>
+            <p>COORDINATED BY</p>
+            <p>Blue Star Families</p>
+			<a href="https://bluestarfam.org/" class="btn btn-primary mt-3" role="button">Learn more</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!--end Section i -->
+ 
+    <!-- Section 3 -->
+
+    <section id="image-slider" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4" style="font-size: 40px;">Our Impact</h2>
+        <div class="slick-slider">
+          <div data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+            <img src="images/ourimpact4.jpg" alt="Military family support" class="img-fluid">
+            <p style="font-weight: 800;">Supporting families in need</p>
+          </div>
+          <div data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+            <img src="images/ourimpact5.jpg" alt="Volunteer work" class="img-fluid">
+            <p  style="font-weight: 800;">Our dedicated volunteers</p>
+          </div>
+          <div data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+            <img src="images/ourimpact6.jpg" alt="Community events" class="img-fluid" style="height: 260px;">
+            <p  style="font-weight: 800;">Building stronger communities</p>
+          </div>
+          <div data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+            <img src="images/ourimpact7.jpg" alt="Education support" class="img-fluid" style="height: 260px;">
+            <p  style="font-weight: 800;">Empowering through education</p>
+          </div>
+          <div data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+            <img src="images/ourimpact8.jpg" alt="Healthcare services" class="img-fluid" style="height: 260px;">
+            <p  style="font-weight: 800;">Providing essential healthcare</p>
+          </div>
+          <div data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+            <img src="images/ourimpact9.jpg" alt="Healthcare services" class="img-fluid" style="height: 260px;">
+            <p  style="font-weight: 800;">Providing essential healthcare</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Section 3 -->
+    <!-- Section 4 -->
+    <main>
+      <section id="news-hero" class="py-5 bg-light">
+        <div class="container">
+          <h1 class="text-center mb-4" style="font-size: 40px;">News & Updates</h1>
+          <p class="lead text-center" style="font-weight: 600; font-size: medium;">Stay informed about our latest initiatives, success stories, and the impact of
+            your support.</p>
+        </div>
+      </section>
+
+      <section id="news-filter" class="py-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 offset-md-3">
+              <select id="category-filter" class="form-select" style="font-size: medium;">
+                <option value="all">All Categories</option>
+                <option value="success-stories">Success Stories</option>
+                <option value="donation-impact">Donation Impact</option>
+                <option value="events">Upcoming Events</option>
+                <option value="policy-updates">Policy Updates</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="news-articles" class="py-5">
+        <div class="container">
+          <div class="row" id="articles-container" style="font-size: medium;">
+            <!-- News articles will be dynamically added here -->
+          </div>
+        </div>
+      </section>
+    <section id="newsletter-signup" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4" style="font-size: 40px;">Stay Updated</h2>
+        <p class="text-center mb-4" style="font-weight: 600; font-size: medium;">
+            Sign up for our newsletter to receive the latest news and updates directly in your inbox.
+        </p>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <form id="newsletter-form" action="/test-email" method="Get" th:action="@{/test-email}">
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Enter your email" aria-label="Email"
+                               aria-describedby="newsletter-submit" style="font-size: large;" required name="email">
+                        <button class="btn btn-primary" type="submit" id="newsletter-submit" style="font-size: large;">
+                            Subscribe
+                        </button>
+                    </div>
+                </form>
+                <div th:if="${successMessage}" class="alert alert-success" th:text="${successMessage}"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+    <!-- End of Section 4 -->
+
+    <!-- Section 5 -->
+    <div class="main"></div>
+    
+    <footer id="Footer" style="background-color:#b3b3cc;"
+      class="page-footer font-small stylish-color-dark pt-4 medium-font">
+      <div style="background-color:#b3b3cc;" class="container text-center text-md-left">
+        <div class="row">
+          <div class="col-md-4 mx-auto" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+            <!-- Content -->
+            <h5 class="text-uppercase font-weight-bold mt-3 mb-4" style="font-size: 24px;">Our Aim</h5>
+            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 70px;">
+           <p> Our goal is to support those suffering from the loss of a loved one due to battle casualties. This assistance is crucial for bereaved families, addressing financial, educational, medical needs, and encouraging volunteer work.</p>
+          </div>
+          <hr class="clearfix w-100 d-md-none">
+          <div id="link10" class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+            <h5 class="text-uppercase font-weight-bold mt-3 mb-4" style="font-size: 24px;">Services</h5>
+              <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 70px;">
+              <p>
+                <a href="#!">Donate </a>
+              </p>
+              <p>
+                <a href="#!">Community</a>
+              </p>
+              <p>
+                <a href="#!">Volunteer</a>
+              </p>
+              <p>
+                <a href="#!">Memorial</a>
+              </p>
+              <p>
+                <a href="#!">About Us</a>
+              </p>
+          </div>
+          <hr class="clearfix w-100 d-md-none">
+          <div id="link10" class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+            <h5 class="text-uppercase font-weight-bold mt-3 mb-4" style="font-size: 24px;">Useful links</h5>
+              <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 70px;">
+              <p>
+                <a href="/profile">Your Account</a>
+              </p>
+               <p>
+                <a href="/help">Help</a>
+              </p>
+          </div>
+          <hr class="clearfix w-100 d-md-none">
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+            <h5 class="text-uppercase font-weight-bold mt-3 mb-4" style="font-size: 24px;">Contact</h5>
+              <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+              <p>
+                <i class="fas fa-home mr-3"></i> Howrah, West Bengal.
+              </p>
+              <p>
+                <i class="fas fa-envelope mr-3"></i> militarysupporthub@mail.com
+              </p>
+              <p>
+                <i class="fas fa-phone mr-3"></i> + 91 9709781081
+              </p>
+              <p>
+                <i class="fas fa-print mr-3"></i> + 91 6290064231
+              </p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <!-- Call to action -->
+      <ul style="background-color:#b3b3cc;" class="list-unstyled list-inline text-center py-2">
+        <li class="list-inline-item">
+          <h5 class="mb-1" style="font-size: 24px;">Register for free</h5>
+        </li>
+        <li class="list-inline-item" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+          <a href="/signup" class="btn btn-outline-primary btn-rounded" style="font-size: 18px;">Sign up!</a>
+        </li>
+      </ul>
+      <hr>
+    <!-- Social buttons -->
+<!-- Social buttons -->
+<div class="hover-effect1" >
+  <ul style="background-color:#b3b3cc;" class="list-unstyled list-inline text-center" >
+    <li class="list-inline-item">
+      <a href="https://www.facebook.com/codewithfaraz" title="Facebook" aria-label="Facebook">
+        <i class="fa fa-facebook"></i>
+        <span class="sr-only">Facebook</span>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a href="https://www.twitter.com/codewithfaraz" title="Twitter" aria-label="Twitter">
+        <i class="fa fa-twitter"></i>
+        <span class="sr-only">Twitter</span>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a href="https://www.instagram.com/codewithfaraz" title="Instagram" aria-label="Instagram">
+        <i class="fa fa-instagram"></i>
+        <span class="sr-only">Instagram</span>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a href="https://www.youtube.com/@codewithfaraz" title="YouTube" aria-label="YouTube">
+        <i class="fa fa-youtube"></i>
+        <span class="sr-only">YouTube</span>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a href="https://github.com/codewithfaraz" title="GitHub" aria-label="GitHub">
+        <i class="fa fa-github"></i>
+        <span class="sr-only">GitHub</span>
+      </a>
+    </li>
+  </ul>
+</div>
+      <!-- Copyright -->
+      <div style="background-color:#b3b3cc;" class="footer-copyright text-center py-3">
+        Copyright© 2024: Design and Devloped by Tech Titans
+      </div>
+    </footer>
+
+    <!-- Link to jQuery (required by Slick Slider) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Link to Slick Slider JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <!-- Your custom JavaScript for Slick Slider initialization -->
+    <script src="/js/script.js"></script>
+    <script src="/js/global.js"></script>
+ <!-- END of HTML Coding... -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</body>
+</html>

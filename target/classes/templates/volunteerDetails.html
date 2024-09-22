@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Volunteer Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .actions {
+            margin-top: 15px;
+        }
+        .alert {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Volunteer Details</h1>
+
+        <!-- Success Message -->
+        <div th:if="${successMessage}" class="alert alert-success" role="alert" th:text="${successMessage}"></div>
+
+        <!-- Volunteer Details -->
+        <div class="card mt-3">
+            <div class="card-body">
+                <h5 class="card-title">Volunteer Information</h5>
+                <p><strong>ID:</strong> <span th:text="${volunteer.id}"></span></p>
+                <p><strong>Name:</strong> <span th:text="${volunteer.name}"></span></p>
+                <p><strong>Email:</strong> <span th:text="${volunteer.email}"></span></p>
+                <p><strong>Phone Number:</strong> <span th:text="${volunteer.phone}"></span></p>
+                <!-- Add other volunteer details as needed -->
+
+                <!-- Action Buttons -->
+                <div class="actions">
+                    <!-- Edit Button -->
+                    <a th:href="@{/adminFinal/volunteer/edit/{id}(id=${volunteer.id})}" class="btn btn-warning btn-sm">Edit</a>
+
+                    <!-- Delete Button -->
+                    <form th:action="@{/adminFinal/volunteer/delete/{id}(id=${volunteer.id})}" method="post" style="display:inline;">
+                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    </form>
+
+                    <!-- Back Button -->
+                    <a href="/adminFinal" class="btn btn-secondary btn-sm">Back to List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

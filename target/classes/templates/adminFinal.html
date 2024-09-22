@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Final Page</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 20px;
+            background-color: #f4f7f9;
+            color: #333;
+        }
+
+        h1, h2 {
+            color: #222;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Close button (back navigation) */
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: #fff;
+            background-color: #e74c3c;
+            padding: 8px 12px;
+            border-radius: 50%;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .close-btn:hover {
+            background-color: #c0392b;
+        }
+
+        .alert {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid transparent;
+        }
+
+        .alert-success {
+            background-color: #d4edda;
+            color: #155724;
+            border-color: #c3e6cb;
+        }
+
+        .alert-danger {
+            background-color: #f8d7da;
+            color: #721c24;
+            border-color: #f5c6cb;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        th {
+            background-color: #007bff;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: center;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            color: #fff;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+        }
+
+        .btn-success:hover {
+            background-color: #218838;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+        }
+
+        .btn-danger:hover {
+            background-color: #c82333;
+        }
+
+        .btn-warning {
+            background-color: #ffc107;
+        }
+
+        .btn-warning:hover {
+            background-color: #e0a800;
+        }
+
+        .btn-sm {
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+
+        /* Search Bar styling */
+        .search-bar {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            table {
+                font-size: 12px;
+            }
+            th, td {
+                padding: 10px;
+            }
+        }
+    </style>
+
+    <script>
+        // Function to hide messages after 2 seconds
+        function hideMessages() {
+            setTimeout(function () {
+                var successAlert = document.getElementById('successMessage');
+                var errorAlert = document.getElementById('errorMessage');
+                if (successAlert) successAlert.style.display = 'none';
+                if (errorAlert) errorAlert.style.display = 'none';
+            }, 2000); // 2000 ms = 2 seconds
+        }
+
+        // Function to filter the volunteer table
+        function filterTable() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const table = document.getElementById('volunteerTable');
+            const rows = table.getElementsByTagName('tr');
+
+            for (let i = 1; i < rows.length; i++) { // Start from 1 to skip header
+                const cells = rows[i].getElementsByTagName('td');
+                let found = false;
+
+                // Check relevant columns: Full Name, Email, Phone
+                for (let j = 1; j < cells.length - 1; j++) { // Skip ID and Actions
+                    if (cells[j].textContent.toLowerCase().includes(filter)) {
+                        found = true;
+                        break;
+                    }
+                }
+
+                rows[i].style.display = found ? '' : 'none';
+            }
+        }
+
+        // Call hideMessages on window load
+        window.onload = hideMessages;
+    </script>
+</head>
+
+<body>
+    <!-- Close button (back to previous page) -->
+    <a href="javascript:history.back()" class="close-btn">&times;</a>
+
+    <h1>Admin Final Page</h1>
+
+    <!-- Success and Error Messages -->
+    <div th:if="${successMessage != null}" id="successMessage" class="alert alert-success" role="alert">
+        <p th:text="${successMessage}"></p>
+    </div>
+    <div th:if="${error != null}" id="errorMessage" class="alert alert-danger" role="alert">
+        <p th:text="${error}"></p>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" id="searchInput" class="form-control" placeholder="Search by name, email, or phone..." oninput="filterTable()">
+    </div>
+
+    <!-- List of Volunteers -->
+    <h2>Volunteer List</h2>
+    <table id="volunteerTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Gender</th>
+                <th>Availability</th>
+                <th>Role</th>
+                <th>Skills</th>
+                <th>Emergency Contact</th>
+                <th>Emergency Phone</th>
+                <th>Relationship</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="volunteer : ${volunteers}">
+                <td th:text="${volunteer.id}"></td>
+                <td th:text="${volunteer.name}"></td>
+                <td th:text="${volunteer.email}"></td>
+                <td th:text="${volunteer.phone}"></td>
+                <td th:text="${volunteer.address}"></td>
+                <td th:text="${volunteer.gender}"></td>
+                <td th:text="${volunteer.availability}"></td>
+                <td th:text="${volunteer.role}"></td>
+                <td th:text="${volunteer.skills}"></td>
+                <td th:text="${volunteer.emergencyName}"></td>
+                <td th:text="${volunteer.emergencyPhone}"></td>
+                <td th:text="${volunteer.relationship}"></td>
+                <td>
+                    <!-- Accept and Reject Buttons (if not ACCEPTED) -->
+                    <form th:if="${volunteer.status != 'ACCEPTED'}"
+                          th:action="@{/adminFinal/volunteer/accept/{id}(id=${volunteer.id})}" 
+                          method="post" style="display:inline;">
+                        <button type="submit" class="btn btn-success btn-sm">Accept</button>
+                    </form>
+
+                    <form th:if="${volunteer.status != 'ACCEPTED'}"
+                          th:action="@{/adminFinal/volunteer/reject/{id}(id=${volunteer.id})}" 
+                          method="post" style="display:inline;">
+                        <button type="submit" class="btn btn-danger btn-sm">Reject</button>
+                    </form>
+
+                    <!-- Edit and Delete (if ACCEPTED) -->
+                    <div th:if="${volunteer.status == 'ACCEPTED'}">
+                        <!-- Edit Volunteer -->
+                        <a th:href="@{/adminFinal/volunteer/edit/{id}(id=${volunteer.id})}" 
+                           class="btn btn-warning btn-sm">Edit</a>
+
+                        <!-- Delete Volunteer -->
+                        <a th:href="@{/adminFinal/volunteer/delete/{id}(id=${volunteer.id})}" 
+                           class="btn btn-danger btn-sm">Delete</a>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

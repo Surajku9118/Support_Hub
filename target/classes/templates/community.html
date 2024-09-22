@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Engagement - Military Family Support Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #c2e4ea;
+            color: #0d0d0d;
+            
+        }
+
+        /* Navbar custom styling */
+.logo {
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 800;
+    color: #080e8e;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .logo:hover {
+    transform: scale(0.8);
+  }
+  
+  
+  .p-1 {
+    font-size: 30px;
+    margin-right: 2rem;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .p-2 {
+    font-size: 30px;
+    color: #bbb;
+    position: absolute;
+    top: 0.4rem;
+    left: 0.5rem;
+  }
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.nav-link {
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+}
+
+.nav-link.active {
+    color: #007bff;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+        /* Page Header */
+        .page-header {
+            background: url('images/m3.jpg') no-repeat center center/cover;
+            height: 300px;
+            color: rgb(0, 128, 255);
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+        }
+
+        /* Engagement Section */
+       
+.engagement-section {
+    padding: 50px 0;
+}
+
+.engagement-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #004080;
+}
+
+.engagement-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.engagement-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.engagement-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #004080;
+}
+
+.engagement-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.engagement-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .engagement-section {
+        padding: 40px 20px;
+    }
+
+    .engagement-item {
+        padding: 15px;
+    }
+
+    .engagement-item h3 {
+        font-size: 1.6rem;
+    }
+
+    .engagement-item p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .engagement-item img {
+        margin-bottom: 15px;
+    }
+
+    .engagement-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .engagement-item p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .engagement-section {
+        padding: 30px 15px;
+    }
+
+    .engagement-item {
+        padding: 10px;
+    }
+
+    .engagement-item h3 {
+        font-size: 1.4rem;
+    }
+
+    .engagement-item p {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .engagement-section {
+        padding: 20px 10px;
+    }
+
+    .engagement-item {
+        margin-bottom: 20px;
+    }
+
+    .engagement-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .engagement-item p {
+        font-size: 0.8rem;
+    }
+}
+
+
+        /* Hover effect */
+        .engagement-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Support Networks Section */
+.support-networks-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.support-networks-section h3 {
+    font-size: 2rem;
+    color: #004080;
+    margin-bottom: 20px;
+}
+
+.network-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.network-list li {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.network-list li span {
+    font-weight: bold;
+    color: #004080;
+}
+
+.support-networks-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*Privacy and Safety*/
+.engagement-section {
+    padding: 50px 0;
+}
+
+.engagement-item {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.engagement-item img {
+    width: 100%;
+    height: 250px; /* Set a fixed height */
+    object-fit: cover;
+    border-radius: 8px; /* Optional: add some rounded corners */
+}
+
+.engagement-item h3 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.engagement-item p {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+@media (max-width: 767px) {
+    .engagement-item img {
+        width: 100%; /* Ensure full width images on small screens */
+        height: auto; /* Maintain aspect ratio on smaller screens */
+    }
+}
+
+/* Community Outreach Section */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.success-stories {
+    flex: 1;
+    background-color: #cde9c8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-right: 20px;
+}
+
+.success-stories h1 {
+    color: #007bff;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.story {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.icon {
+    font-size: 2rem;
+    color: #007bff;
+    margin-right: 15px;
+}
+
+.details h2 {
+    color: #343a40;
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.details p {
+    color: #6c757d;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+<!--footer-->
+.section-5 {
+  width: 100%;
+}
+
+.section-5-top {
+  width: 100%;
+  background-color: #f3f7fa;
+  text-align: center;
+  padding: 7rem 0;
+}
+
+.section-5-top-heading {
+  font-size: 3.5rem;
+  font-weight: 400;
+  margin-bottom: 4rem;
+}
+
+.hover-effect1 {
+  min-height: 20px;
+  background: #F44336;
+  text-align: center;
+}
+
+.hover-effect1 ul {
+  padding-top: 1px;
+}
+
+.hover-effect1 ul li {
+  display: inline-block;
+}
+
+.hover-effect1 ul li a {
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
+  margin: 0px 10px;
+  line-height: 50px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: #dc3545;
+  -webkit-transition: all .6s ease;
+  -moz-transition: all .6s ease;
+  -ms-transition: all .6s ease;
+  -o-transition: all .6s ease;
+  transition: all .6s ease;
+}
+
+.hover-effect1 ul li:hover a {
+  border-radius: 50%;
+  background: #dc3545;
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.copyright {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+    </style>
+</head>
+
+<body>
+
+<div class="container-fluid bg-dark text-light p-0">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-6 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small>kolkata</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <small class="far fa-clock text-primary me-2"></small>
+                    <small>Mon - Fri : 09 AM - 09 PM</small>
+                </div>
+            </div>
+            <div class="col-lg-6 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <small class="fa fa-phone-alt text-primary me-2"></small>
+                    <small>+91 7045464099</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-link text-light" href="https://www.facebook.com/share/XjPac8YhaA5qGQE6/?mibextid=qi2Omg"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-link text-light" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-link text-light" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-link text-light" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+    <div class="navbar-logo logo" a href="/" style="margin-top: -9px;">
+        <img class="p1" src="/images/logo.png" alt="Logo" style="width: 115; height: 90px;">
+        Support Hub
+    </div></a>
+    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="/" class="nav-item nav-link active">Home</a>
+        </div>
+        <a href="https://www.nids.mod.go.jp/english/event/symposium/pdf/2011/e_03.pdf"
+            class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"><i
+                class="fa fa-arrow-left ms-3" style ="margin-right:10px;"></i>community</a>
+    </div>
+</nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1>Community Engagement</h1>
+        <p>Bringing Our Military Community Together</p>
+    </header>
+
+    <!-- Main Content -->
+    <section class="container text-center my-5" id="local_resources">
+        <h1>Welcome to the Military Family Support Hub</h1>
+        <p>Your content goes here...</p>
+    </section>
+
+    <!-- Community Engagement Section -->
+    <section class="engagement-section container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="engagement-item">
+                    <img src="images/community6.jpg" alt="Community Event 1">
+                    <h3>Volunteer Days</h3>
+                    <p>Join us for our regular volunteer days where we give back to the community through various
+                        projects.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="engagement-item">
+                    <img src="images/community7.jpg" alt="Community Event 2">
+                    <h3>Workshops & Seminars</h3>
+                    <p>Attend our workshops and seminars focused on topics important to military families, from
+                        financial planning to mental health.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="engagement-item">
+                    <img src="images/community8.jpg" alt="Community Event 3">
+                    <h3>Family Fun Days</h3>
+                    <p>Bring your family to our fun-filled days designed to strengthen bonds and create lasting
+                        memories.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="engagement-item">
+                    <img src="images/community9.jpg" alt="Community Event 4">
+                    <h3>Support Groups</h3>
+                    <p>Connect with others in our community support groups, offering a safe space to share and grow
+                        together.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="engagement-item">
+                    <img src="images/community10.jpg" alt="Community Event 5">
+                    <h3>Community Outreach</h3>
+                    <p>Help us reach out to those in need by participating in our community outreach programs.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="engagement-item">
+                    <img src="images/community11.jpg" alt="Community Event 6">
+                    <h3>Holiday Celebrations</h3>
+                    <p>Celebrate the holidays with our community events that bring everyone together in festive spirit.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Networks Section -->
+<div class="support-networks-section" id="Support-networks">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 order-md-1">
+                <img src="images/comunity1.jpg" alt="Support Network Image" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6 order-md-2">
+                <h3>Support Networks</h3>
+                <ul class="network-list">
+                    <li><span>1. Peer Support:</span> Connect with fellow service members and their families to build a strong support network, sharing experiences and providing mutual encouragement.</li>
+                    <li><span>2. Mentorship Programs:</span> Participate in our mentorship programs to gain guidance from experienced veterans and share your own experiences to help others navigate military life.</li>
+                    <li><span>3. Family Support Services:</span> Access a wide range of services tailored to the needs of military families, including counseling, childcare, and educational resources.</li>
+                    <li><span>4. Community Outreach:</span> Engage with local communities through volunteer opportunities and outreach programs that strengthen ties between military and civilian populations.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Privacy and Safety Section -->
+    <section class="engagement-section container">
+        <h2>Privacy and Safety</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="engagement-item">
+                    <img src="images/community2.jpg" alt="Privacy and Safety 1">
+                    <h3>Data Protection</h3>
+                    <p>We prioritize your privacy by ensuring all personal data is handled with the utmost care.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="engagement-item">
+                    <img src="images/community3.jpg" alt="Privacy and Safety 2" height="325px">
+                    <h3>Secure Platforms</h3>
+                    <p>Our platforms are designed with security in mind to protect your interactions and data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     
+    <!-- Community Outreach Section -->
+<div class="container" id ="comiunity_outreach">
+    <div class="content">
+        <div class="success-stories">
+            <h1>Community Outreach</h1>
+            <div class="story">
+                <div class="icon">&#9733;</div>
+                <div class="details">
+                    <h2>Veteran Services</h2>
+                    <p>We offer support services tailored to veterans, helping them transition back to civilian life and find fulfilling careers that utilize their military skills and experience.</p>
+                </div>
+            </div>
+            <div class="story">
+                <div class="icon">&#9734;</div>
+                <div class="details">
+                    <h2>Family Reconnection Programs</h2>
+                    <p>Our family reconnection programs help military families navigate the challenges of deployment and reintegration, offering counseling services and support groups.</p>
+                </div>
+            </div>
+            <div class="story">
+                <div class="icon">&#10035;</div>
+                <div class="details">
+                    <h2>Community Partnerships</h2>
+                    <p>We partner with local organizations to extend our reach and support within the community, including organizing events like Military Appreciation Day to celebrate the contributions of veterans and their families.</p>
+                </div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="images/community4.jpg" alt="Military ceremony">
+        </div>
+    </div>
+</div>
+
+
+    <!-- Footer -->
+   <footer id="Footer" style="background-color:#b3b3cc;"
+        class="page-footer font-small stylish-color-dark pt-4 medium-font">
+        <div style="background-color:#b3b3cc;" class="container text-center text-md-left">
+            <div class="row">
+                <div class="col-md-4 mx-auto">
+                    <!-- Content -->
+                    <h5 class="text-uppercase font-weight-bold mt-3 mb-4" style="font-size: 24px;">Our Aim</h5>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 70px;">
+                    <p> Our goal is to support those suffering from the loss of a loved one due to battle casualties.
+                        This assistance is crucial for bereaved families, addressing financial, educational, medical
+                        needs, and encouraging volunteer work.</p>
+                </div>
+                <hr class="clearfix w-100 d-md-none">
+                <div id="link10" class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h5 class="text-uppercase font-weight-bold mt-3 mb-4" style="font-size: 24px;">Services</h5>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 70px;">
+                        <p>
+                            <a href="#!">Donate </a>
+                        </p>
+                        <p>
+                            <a href="#!">Community</a>
+                        </p>
+                        <p>
+                            <a href="#!">Volunteer</a>
+                        </p>
+                        <p>
+                            <a href="#!">Memorial</a>
+                        </p>
+                        <p>
+                            <a href="#!">About Us</a>
+                        </p>
+                </div>
+                <hr class="clearfix w-100 d-md-none">
+                <div id="link10" class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h5 class="text-uppercase font-weight-bold mt-3 mb-4" style="font-size: 24px;">Useful links</h5>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 70px;">
+                        <p>
+                            <a href="https://armedforceshub.com/">Your Account</a>
+                        </p>
+                        
+                        <p>
+                            <a href="/help">Help</a>
+                        </p>
+                </div>
+                <hr class="clearfix w-100 d-md-none">
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <h5 class="text-uppercase font-weight-bold mt-3 mb-4" style="font-size: 24px;">Contact</h5>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                        <p>
+                            <i class="fas fa-home mr-3"></i> Howrah, West Bengal.
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope mr-3"></i> militarysupporthub@mail.com
+                        </p>
+                        <p>
+                            <i class="fas fa-phone mr-3"></i> + 91 9709781081
+                        </p>
+                        <p>
+                            <i class="fas fa-print mr-3"></i> + 91 6290064231
+                        </p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <!-- Call to action -->
+        <ul style="background-color:#b3b3cc;" class="list-unstyled list-inline text-center py-2">
+            <li class="list-inline-item">
+                <h5 class="mb-1" style="font-size: 24px;">Register for free</h5>
+            </li>
+            <li class="list-inline-item">
+                <a href="home.html" class="btn btn-outline-primary btn-rounded" style="font-size: 18px;">Sign up!</a>
+            </li>
+        </ul>
+        <hr>
+        <!-- Social buttons -->
+        <div class="hover-effect1">
+            <ul style="background-color:#b3b3cc;" class="list-unstyled list-inline text-center">
+                <li class="list-inline-item">
+                    <a href="https://www.facebook.com/codewithfaraz" title="Facebook"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.twitter.com/codewithfaraz" title="Twitter"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.instagram.com/codewithfaraz" title="Instagram"><i
+                            class="fa fa-instagram"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.youtube.com/@codewithfaraz" title="Youtube"><i class="fa fa-youtube"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#." title="Github"><i class="fa fa-github"></i></a>
+                </li>
+            </ul>
+        </div>
+        <!-- Copyright -->
+        <div style="background-color:#b3b3cc;" class="footer-copyright text-center py-3">
+            Copyright© 2024: Design and Devloped by Tech Titans
+        </div>
+    </footer>
+
+
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Change navbar background on scroll
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+
+</html>

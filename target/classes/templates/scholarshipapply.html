@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Scholarship Applications</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <button class="close-btn" onclick="window.location.href='/applicationList'"
+            style="position: absolute; top: 10px; right: 10px; background: transparent;
+            border: none; font-size: 24px; color: #111213; cursor: pointer;"
+            onmouseover="this.style.color='#ccc';"
+            onmouseout="this.style.color='#111213';">
+        &times;
+    </button>
+
+    <h1>Scholarship Application</h1>
+
+    <!-- Display any file upload error -->
+    <div th:if="${fileUploadError}" class="alert alert-danger" role="alert">
+        <span th:text="${fileUploadError}"></span>
+    </div>
+
+    <form th:action="@{/apply}" th:object="${application}" method="post" enctype="multipart/form-data">
+        <!-- Form fields go here -->
+        <button type="submit" class="btn btn-primary">Submit Application</button>
+    </form>
+
+    <!-- Display submitted scholarship applications -->
+    <h2>Submitted Applications</h2>
+    <table class="table table-striped mt-4">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Education</th>
+                <th>PAN</th>
+                <th>Last Qualification Certificate</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="app, stat : ${applications}">
+                <td th:text="${stat.count}"></td>
+                <td th:text="${app.name}"></td>
+                <td th:text="${app.email}"></td>
+                <td th:text="${app.phone}"></td>
+                <td th:text="${app.address}"></td>
+                <td th:text="${app.education}"></td>
+                <td>
+                    <a th:href="@{/files/pan/{id}(id=${app.id})}">Download PAN</a>
+                </td>
+                <td>
+                    <a th:href="@{/files/certificate/{id}(id=${app.id})}">Download Certificate</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

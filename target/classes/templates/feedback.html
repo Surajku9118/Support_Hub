@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback System</title>
+    <style>
+        .feedback-panel {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .star {
+            cursor: pointer;
+            font-size: 24px;
+            color: #ccc;
+        }
+
+        .star.selected {
+            color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+
+<div class="feedback-panel">
+    <form id="feedback-form" action="#" th:action="@{/submitForm}" method="post">
+        <div id="star-rating">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+        </div>
+        <input type="hidden" id="rating" name="rating" value="0">
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<h3>Feedback List:</h3>
+<ul id="feedback-list">
+    <li th:each="fb : ${feedbackList}">
+        <span th:text="'Rating: ' + ${fb.rating} + ' - Comment: ' + ${fb.comment}"></span>
+    </li>
+</ul>
+
+<script>
+    const stars = document.querySelectorAll('.star');
+    const ratingInput = document.getElementById('rating');
+
+    stars.forEach(star => {
+        star.addEventListener('click', () => {
+            const rating = star.getAttribute('data-value');
+            ratingInput.value = rating;
+
+            stars.forEach(s => {
+                s.classList.remove('selected');
+            });
+            for (let i = 0; i < rating; i++) {
+                stars[i].classList.add('selected');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
